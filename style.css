@@ -23,7 +23,7 @@ nav{
     align-items: center;
 }
 .navbar-one{
-    background-color: purple;
+    background-color: rgb(12, 109, 199);
     color: white;
     height: 40px;
     cursor: pointer;
@@ -49,7 +49,7 @@ span {
 }
 
 .navbar-second{
-    background-color: blue;
+    background-color:#0077C0;
     height: 70px;
 }  
 
@@ -77,4 +77,80 @@ section {
     width: 100%;
     height: 150vh;
     background: url(images/background.JPG)no-repeat center center / cover;
+}
+
+.gallery-section{
+    width: 100%;
+}
+
+.gallery-section .gallery-wrap{
+    padding-top: 10px !important;
+}
+
+.gallery-section .gallery-wrap .gallery-images {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 50px;
+    grid-gap: 20px;
+}
+
+.gallery-section .gallery-wrap .gallery-images .gallery {
+    width: 100%;
+    position: relative;
+}
+
+
+.gallery-section .gallery-wrap .gallery-images  .image-section{
+    width: 100%;
+
+}
+.gallery-section .gallery-wrap .gallery-images  .image-section img{
+    width: 100%;
+    height: auto !important;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: block;
+}
+
+
+.gallery-section .gallery-wrap .gallery-images  .gallery .caption{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.30s;
+    background: rgba(3, 87, 245, 0.5);
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery-section .gallery-wrap .gallery-images  .gallery .caption:hover{
+    opacity: 1;
+}
+
+.gallery-section .gallery-wrap .gallery-images  .gallery .caption p{
+    font-size: 13px !important;
+}
+@media  screen and (max-width: 992px) {
+    .gallery-section .gallery-wrap .gallery-images{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media  screen and (max-width: 568px) {
+    .gallery-section .gallery-wrap .gallery-images{
+        grid-template-columns: 1fr;
+    }
+    
 }
