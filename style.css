@@ -59,7 +59,31 @@ span {
     cursor: pointer;
     color: white;
 }
-
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0077C0;
+    padding: 10px;
+    display: none;
+  }
+  
+  .dropdown-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 li {
     list-style: none;
 }
