@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Beacon Academy</title>]
+    <title>About Beacon Academy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
@@ -20,6 +20,19 @@
     .about-1{
         margin: 30px;
         padding: 5px;
+    }
+    .about-items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .about-item {
+        flex: 1; /* make each item take equal space */
+        margin: 20px;
+        background-color: white;
+        padding: 80px 30px 30px;
+        box-shadow: 0 0 9px rgba(0, 0,0 , .6,);
     }
     .about-1 h1{
         text-align: center;
@@ -179,10 +192,7 @@
                                 <i class="fa fa-book"></i>
                                 <h3>MISSION</h3>
                                 <hr>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Minima suscipit maxime necessitatibus deleniti natus aspernatur omnis atque molestias saepe sequi quas sed,
-                                     architecto dignissimos fugiat laboriosam tenetur mollitia, magnam quae.
-                                </p>
+                                <p>"To provide wholesome quality education in a caring and conducive environment." </p>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -190,9 +200,8 @@
                                 <i class="fa fa-globe"></i>
                                 <h3>VISION</h3>
                                 <hr>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Minima suscipit maxime necessitatibus deleniti natus aspernatur omnis atque molestias saepe sequi quas sed,
-                                     architecto dignissimos fugiat laboriosam tenetur mollitia, magnam quae.
+                                <p>
+                                    "To ba an institution of excellence in a hollistic development of children."
                                 </p>
                             </div>
                         </div>
@@ -212,6 +221,7 @@
             </div>
         </div>
     </section>
+    <video autoplay loop muted src="images/video.mp4" style="width: 100%; max-width: 100%; height: 400px; object-fit: cover;"></video>
     <footer class="footer">
         <div class="footer-col">
             <h4>Beacon of Hope</h4>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beacon of Hope Academy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <style>
@@ -106,16 +106,136 @@
             margin-left: 30px;
             color: white;
             font-weight: 400;
-        } 
-        .footer{
-            background-color: #0077C0;
-            padding: 50px;
+        }
+         .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+         }
+         .container-box{
+            max-width: 860px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: #0077C0;
+            box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.19);
+         }   
+         .right iframe{
+            padding: 10px 10px;
+            width: 100%;
+            height: 470px;
+         }
+         .left {
+            padding: 25px 40px;
+         }
+         h2 {
+            position: relative;
+            padding: 0 0 10px;
+            margin-bottom: 10px;
+         }
+         h2:after{
+            position: absolute;
+            content: "";
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 4px;
+            background-color: #0077C0;
+            border-radius: 2px;
+         }
+         .field {
+            width: 100%;
+            border: 2px solid #0077C0;
+            outline: none;
+            background-color: rgba(230, 230,230,0.6);
+            padding: .5rem 1rem;
+            margin-bottom: 22px;
+            transition: .3s;
+         }
+         .field:hover{
+            background-color: white !important;
+
+         }
+         textarea{
+            min-height: 150px;
+         }
+        .btn {
+            width: 100%;
+            padding: .5rem 1rem;
+            background: #0077C0;
+            color: #fff;
+            font-size: 1.1rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition:.3s;
+        } 
+        .btn:hover{
+            background: #0077C0;
+        }
+        .field:focus{
+            border: 2px solid rgba(30, 85,250, .7);
+            background: #fff;
+        }
+         @media screen  and (max-width:769px) {
+            .contact-box{
+                grid-template-columns: 1fr; 
+            }
+            .left iframe{
+                padding: 0;
+            }
+         }
+     
+        
+        .contact-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .left {
+            padding: 25px 40px;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .right {
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        @media screen and (min-width: 769px) {
+           .contact-box {
+                justify-content: space-around;
+            }
+           .left {
+                padding: 25px 40px;
+            }
+           .right {
+                padding: 0 10px;
+            }
+        }
+        footer {
+            background-color: #0077C0;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
         
         .footer-col {
             margin: 20px;
+            width: 20%;
         }
         
         .footer-col ul {
@@ -137,6 +257,25 @@
             color: #ccc;
         }
         
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        
+        .social-links li {
+            margin-right: 20px;
+        }
+        
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: #ccc;
+        }
         .social-links ul {
             list-style: none;
             padding: 0;
@@ -202,18 +341,22 @@
             <li><a href="contact.html">contact us</a></li>
         </ul>
     </nav>
- 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, maiores, iusto corporis sequi earum ducimus veritatis similique praesentium ipsam architecto quasi consequuntur officia, repellendus delectus! Aliquid obcaecati earum aperiam quibusdam.
-Nobis nam a labore molestias dicta perspiciatis corporis temporibus odit sed. Quam, officiis velit recusandae perferendis architecto voluptates repellat perspiciatis at, autem deserunt cupiditate repellendus. Quibusdam saepe doloremque atque minus!
-Itaque amet et veniam eaque rerum? Animi, blanditiis. Ea, numquam. Dolorem porro similique deserunt illum! Dolorum beatae culpa quis, repellendus ad animi, expedita cumque neque iure ipsum obcaecati possimus totam.
-Eum id magni maxime aliquid perspiciatis dolor cupiditate. Corrupti molestias voluptatem omnis vero ullam mollitia explicabo et nam minima quis illum praesentium inventore eaque commodi dolorem, facere nisi numquam sed.
-Impedit, expedita! Iusto molestiae blanditiis sequi facere modi ducimus omnis in temporibus maxime, optio quidem dolorum, alias reiciendis, veniam atque exercitationem ipsa sapiente dolores earum cupiditate iure? Cum, saepe dignissimos.
-Labore reiciendis, voluptatum ut laudantium consectetur cupiditate velit, ratione quo vel ducimus corporis earum voluptatem odit debitis expedita optio. Sed, impedit inventore delectus iste consectetur sit. Laboriosam numquam vel officia.
-Soluta, ipsa recusandae quo cupiditate possimus earum consequatur harum et vel eius quisquam facilis incidunt, quis aperiam ipsum officiis. Veniam placeat molestiae quo officia ad aliquid repellendus ea minima ullam.
-Quae possimus veniam earum, natus soluta est rerum reprehenderit repellat ipsa nemo eaque magnam dicta eum autem sunt totam cupiditate. Iste deserunt eum soluta illum fugiat facilis! Natus, omnis dignissimos?
-Modi tempore eius dolore illo. Et voluptate vitae facilis fugiat voluptatum ullam iste ea distinctio debitis enim, veniam porro architecto quae quasi magni dolorum modi accusantium necessitatibus! Nesciunt, corrupti voluptatum!
-Facere fugit sed deleniti, architecto suscipit ullam, hic ducimus dicta, officia optio est mollitia ipsa tempora beatae. Amet eaque vero, accusamus aut, nam tempora unde, ipsam sapiente necessitatibus obcaecati corrupti?</p>
-    <footer class="footer">
+    <div class="container">
+        <div class="contact-box">
+            <div class="right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6369922723165!2d36.76049007416703!3d-1.394302635752033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05b0eb95a0eb%3A0xfb77903c7dbc4b18!2sBeacon%20Of%20Hope!5e0!3m2!1sen!2ske!4v1717604347128!5m2!1sen!2ske"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="left">
+                <h2>contact us</h2>
+                <input type="text" class="field" placeholder="Enter your name">
+                <input type="text" class="field" placeholder="Enter your Email">
+                <input type="text" class="field" placeholder="Enter your Phone">
+                <textarea placeholder="Message" class="field"></textarea>
+                <button class="btn">Send</button>
+            </div>
+        </div> 
+    </div>
+    <footer>
         <div class="footer-col">
             <h4>Beacon of Hope</h4>
             <ul>

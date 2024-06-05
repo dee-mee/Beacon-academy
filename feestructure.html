@@ -45,7 +45,7 @@
     
     .left > div:hover,
     .right > div:hover {
-        color:black;
+        color: white;
         transition: all 0.5s;
     }
     
@@ -63,7 +63,7 @@
         font-size: 24px;
         cursor: pointer;
         color: white;
-        padding-top: 20;
+        padding-top: 30;
     }
     .dropdown {
       position: relative;
@@ -109,7 +109,24 @@
       flex-direction: column;
       align-items: center;
     }
+    .container {
+      width: 100%;
+      height: auto;
+    }
 
+    .container img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .container .text {
+      position: absolute;
+      color: white;
+      left: 30%;
+      top: 30%;
+      font-size: 15px;
+      transform: translate(-50%, -50%);
+    }
     h1 {
       margin-bottom: 2rem;
     }
@@ -232,10 +249,12 @@
           <li><a href="contact.html">contact us</a></li>
       </ul>
   </nav>
-  <section>
-    </nav>
+<div class="container">
+  <img src="images/background.webp" alt="">
+  <div class="text"><h1>Beacon of Hope Fee Structures >> </h1></div>
+</div>
   <div class="container">
-    <h1>Beacon of Hope Academy Fee Structures</h1>
+      <h3>FEES</h3>
     <button class="button">
       PRE-PRIMARY 1 - 2 FEE STRUCTURE
       <i class="download-icon">&#128190;</i>
@@ -254,15 +273,11 @@
     </button>
     <button class="button">
         <a href="images/fee-structure/junior.png">
-      JUNIOR HIGH SCHOOL FEE STRUCTURE
+      JUNIOR HIGH FEE 
       <i class="download-icon">&#128190;</i>
     </a>
     </button>
-    <button class="button">
-      PGS Flyer 2024
-      <i class="download-icon">&#128190;</i>
-    </button>
-  </div>
+    </div>
   <footer class="footer">
     <div class="footer-col">
         <h4>Beacon of Hope</h4>
@@ -296,9 +311,9 @@
         <h4>follow us</h4>
         <div class="social-links">
             <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.facebook.com/BoHAcademy"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/beaconofhopeac1/"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
         </div>
