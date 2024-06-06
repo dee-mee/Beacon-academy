@@ -7,131 +7,316 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
         }
-
-        body {
-            font-family: 'Poppins', sans-serif;
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-
+        
+        .navbar-top,
+        .navbar-second {
+            background-color: #0077C0;
+            color: #fff;
+        }
+        
+        .navbar-top {
+            padding: 10px 0;
+        }
+        
+        .navbar-top .container,
+        .navbar-second ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .navbar-top ul,
+        .navbar-second ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar-top ul li,
+        .navbar-second ul li {
+            margin-right: 20px;
+        }
+        
+        .navbar-top ul li a,
+        .navbar-second ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .navbar-top ul li a:hover,
+        .navbar-second ul li a:hover {
+            color: #ccc;
+        }
+        
+        .navbar-second ul {
+            padding: 10px 0;
+            justify-content: center;
+        }
+        
         .about-1 {
-            margin: 30px;
-            padding: 5px;
+            padding: 40px 0;
+            text-align: center;
+            background-color: #f5f5f5;
         }
-
+        
         .about-items {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            margin: 40px 0;
         }
-
+        
         .about-item {
-            flex: 1; /* make each item take equal space */
+            flex: 1;
             margin: 20px;
-            background-color: #0077C0;
-            padding: 80px 30px 30px;
+            padding: 60px 20px;
+            background-color: #e0e0e0;
             box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
-        }
-
-        .about-1 h1 {
+            perspective: 1000px;
+            position: relative;
             text-align: center;
-            color: #fff;
-            font-weight: bold;
+            height: 300px;
         }
-
-        .about-1 p {
-            text-align: center;
-            padding: 3px;
-            color: black;
+        
+        .about-item-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
         }
-
-        .about-item i {
-            font-size: 43px;
-            margin: 0;
+        
+        .about-item:hover .about-item-inner {
+            transform: rotateY(180deg);
         }
-
-        .about-item h3 {
-            font-size: 25px;
-            margin-bottom: 25px;
-        }
-
-        .about-item hr {
-            width: 40px;
-            height: 3px;
-            background-color: #5fbff9;
-            margin: 0 auto;
-            border: none;
-        }
-
-        .about-item p {
-            margin-top: 20px;
-        }
-
-        .about-item:hover {
-            background-color: #5fbff9;
-        }
-
-        .about-item img,
-        .about-item:hover h3,
-        .about-item:hover p {
-            color: #fff;
-        }
-
-        .about-item:hover hr {
-            background-color: #fff;
-        }
-
-        .footer {
-            background-color: #0077C0;
-            padding: 50px;
+        
+        .about-item .about-item-front,
+        .about-item .about-item-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
         }
-
-        .footer-col {
-            margin: 20px;
+        
+        .about-item .about-item-back {
+            background-color: #0077C0;
+            color: #fff;
+            transform: rotateY(180deg);
         }
-
+        
+        .about-item i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #0077C0;
+        }
+        
+        .about-item h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        
+        .about-item p {
+            color: #0077C0;
+            font-size: 18px;
+        }
+        
+        .about-item .about-item-back p {
+            color: white;
+            padding: 20px;
+        }
+        
+        .footer {
+            background-color: #0077C0;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-col {
+            flex: 1;
+            margin: 10px;
+        }
+        
+        .footer-col h3 {
+            margin-bottom: 20px;
+        }
+        
         .footer-col ul {
             list-style: none;
             padding: 0;
-            margin: 0;
         }
-
-        .footer-col li {
+        
+        .footer-col ul li {
             margin-bottom: 10px;
         }
-
-        .footer-col a {
+        
+        .footer-col ul li a {
             color: #fff;
             text-decoration: none;
         }
-
-        .footer-col a:hover {
+        
+        .footer-col ul li a:hover {
             color: #ccc;
         }
-
+        
         .social-links ul {
             list-style: none;
-            padding: 0;
-            margin: 0;
             display: flex;
+            justify-content: flex-start;
+            padding: 0;
         }
-
+        
         .social-links li {
             margin-right: 20px;
         }
-
+        
         .social-links a {
             color: #fff;
             text-decoration: none;
         }
-
+        
         .social-links a:hover {
             color: #ccc;
         }
+        
+        .beacon-way {
+            background-color: #f5f5f5;
+            padding: 60px 0;
+        }
+        
+        .beacon-way h2 {
+            text-align: center;
+            color: #0077C0;
+            margin-bottom: 40px;
+        }
+        
+        .beacon-way-items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 30px;
+        }
+        
+        .beacon-way-item {
+            flex: 1;
+            margin: 20px;
+            padding: 60px 20px;
+            background-color: #e0e0e0;
+            box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+            perspective: 1000px;
+            position: relative;
+            text-align: center;
+            height: 300px;
+        }
+        
+        .beacon-way-item-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .beacon-way-item:hover .beacon-way-item-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .beacon-way-item .beacon-way-item-front,
+        .beacon-way-item .beacon-way-item-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .beacon-way-item .beacon-way-item-back {
+            background-color: #e0e0e0;
+            color: #0077C0;
+            transform: rotateY(180deg);
+        }
+        
+        .beacon-way-item i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #0077C0;
+        }
+        
+        .beacon-way-item h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        
+        .beacon-way-item p {
+            color: #0077C0;
+            font-size: 18px;
+        }
+        
+        .beacon-way-item .beacon-way-item-back p {
+            color: white;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-items,
+            .beacon-way-items {
+                flex-direction: column;
+            }
+        
+            .about-item,
+            .beacon-way-item {
+                height: auto;
+                margin: 10px 0;
+            }
+        
+            .navbar-second ul {
+                flex-direction: column;
+            }
+        
+            .navbar-second ul li {
+                margin: 10px 0;
+            }
+        
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .footer-col {
+                margin: 10px 0;
+            }
+        
+            .social-links ul {
+                justify-content: center;
+            }
+        
+            .social-links li {
+                margin: 0 10px;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -142,12 +327,12 @@
                 <span>info@yourdomain.com</span>
             </div>
             <div class="call">
-               <i class="fa fa-phone-alt"></i>
+                <i class="fa fa-phone-alt"></i>
                 <span>+1234567890</span>
             </div>
         </div>
         <div class="right flex">
-            <div class="twitter">
+            <div class="twitter">  	
                 <i class="fab fa-twitter"></i>
                 <span>Twitter</span>
             </div>
@@ -179,57 +364,127 @@
             <li><a href="contact.html">contact us</a></li>
         </ul>
     </nav>
-    <section>
-    <section id="about">
-        <div class="about-1">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Illo harum libero qui reiciendis corrupti eaque iusto quo! Soluta ratione fugit labore. 
-                Reprehenderit commodi iure et odit error veritatis ratione maxime.</p>
-        </div>
-        <div id="about-2">
-            <div class="content-box-lg">
-                <div class="about-items">
-                    <div class="about-item text-center">
-                        <i class="fa fa-book"></i>
-                        <h3>MISSION</h3>
+    <video autoplay loop muted src="images/video.mp4" style="width: 100%; max-width: 100%; height: 400px; object-fit: cover;"></video>
+    <div class="about-1">
+        <h1>Welcome to Beacon Academy</h1>
+        <p>At Beacon Academy, we strive for excellence in education and personal development.</p>
+        <div class="about-items">
+            <div class="about-item">
+                <div class="about-item-inner">
+                    <div class="about-item-front">
+                        <i class="fa-solid fa-apple-whole"></i>
+                        <h3>Education</h3>
                         <hr>
-                        <p>"To provide wholesome quality education in a caring and conducive environment." </p>
+                        <p>High-quality education for all students.</p>
                     </div>
-                    <div class="about-item text-center">
-                        <i class="fa fa-globe"></i>
-                        <h3>VISION</h3>
-                        <hr>
-                        <p>"To be an institution of excellence in holistic development of children."</p>
+                    <div class="about-item-back">
+                        <h3>Learn More</h3>
+                        <p>Beacon Academy offers a comprehensive curriculum that prepares students for future success.</p>
                     </div>
-                    <div class="about-item text-center">
-                        <i class="fa fa-pencil"></i>
-                        <h3>ACHIEVEMENTS</h3>
+                </div>
+            </div>
+            <div class="about-item">
+                <div class="about-item-inner">
+                    <div class="about-item-front">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <h3>Innovation</h3>
                         <hr>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima suscipit maxime necessitatibus deleniti natus aspernatur omnis atque molestias saepe sequi quas sed, architecto dignissimos fugiat laboriosam tenetur mollitia, magnam quae.</p>
+                        <p>Fostering creativity and innovation in every student.</p>
+                    </div>
+                    <div class="about-item-back">
+                        <h3>Learn More</h3>
+                        <p>Our programs encourage students to think outside the box and develop innovative solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-item">
+                <div class="about-item-inner">
+                    <div class="about-item-front">
+                        <i class="fa-solid fa-flag"></i>
+                        <h3>Community</h3>
+                        <hr>
+                        <p>Building a strong and supportive community.</p>
+                    </div>
+                    <div class="about-item-back">
+                        <h3>Learn More</h3>
+                        <p>We believe in the power of community and work together to support each other.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <video autoplay loop muted src="images/video.mp4" style="width: 100%; max-width: 100%; height: 400px; object-fit: cover;"></video>
+    </div>
+
+    <div class="beacon-way">
+        <h2>The Beacon Way</h2>
+        <div class="beacon-way-items">
+            <div class="beacon-way-item">
+                <div class="beacon-way-item-inner">
+                    <div class="beacon-way-item-front">
+                        <i class="fa-solid fa-praying-hands"></i>
+                        <h3>Innovation</h3>
+                        <p>Encouraging creative thinking and problem-solving.</p>
+                    </div>
+                    <div class="beacon-way-item-back">
+                        <p>We encourage students to think creatively and approach problems with innovative solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="beacon-way-item">
+                <div class="beacon-way-item-inner">
+                    <div class="beacon-way-item-front">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <h3>Compassion</h3>
+                        <p>Fostering a supportive and caring environment.</p>
+                    </div>
+                    <div class="beacon-way-item-back">
+                        <p>Our community is built on compassion and support, ensuring every student feels valued and cared for.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="beacon-way-item">
+                <div class="beacon-way-item-inner">
+                    <div class="beacon-way-item-front">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <h3>Compassion</h3>
+                        <p>Fostering a supportive and caring environment.</p>
+                    </div>
+                    <div class="beacon-way-item-back">
+                        <p>Our community is built on compassion and support, ensuring every student feels valued and cared for.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="beacon-way-item">
+                <div class="beacon-way-item-inner">
+                    <div class="beacon-way-item-front">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Collaboration</h3>
+                        <p>Working together to achieve common goals.</p>
+                    </div>
+                    <div class="beacon-way-item-back">
+                        <p>We believe in the power of collaboration and work together to achieve our common goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer-col">
             <h4>Beacon of Hope</h4>
             <ul>
                 <li><a href="#">about us</a></li>
-                <li><a href="">our services</a></li>
-                <li><a href="">privacy policy</a></li>
-                <li><a href="">affiliate program</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">affiliate program</a></li>
             </ul>
         </div>
         <div class="footer-col">
             <h4>get help</h4>
             <ul>
                 <li><a href="#">faq</a></li>
-                <li><a href="">shipping</a></li>
-                <li><a href="">returns</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
                 <li><a href="#">payment options</a></li>
-                <li><a href="">order status</a></li>
+                <li><a href="#">order status</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -253,5 +508,6 @@
             </div>
         </div>
     </footer>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </body>
 </html>
