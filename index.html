@@ -6,7 +6,6 @@
     <title>Beacon of Hope Academy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <nav class="navbar-one flex">
@@ -17,24 +16,26 @@
             </div>
             <div class="call">
                 <i class="fa fa-phone-alt"></i>
-                <span>+1234567890</span>
+                <span>+254703304489</span>
             </div>
         </div>
         <div class="right flex">
-            <div class="twitter">  	
+            <div class="twitter">
                 <i class="fab fa-twitter"></i>
                 <span>Twitter</span>
             </div>
             <div class="facebook">
                 <i class="fab fa-facebook"></i>
                 <span>facebook</span>
-            </div> 
+            </div>
         </div>
     </nav>
     <nav class="navbar-second flex">
         <div class="logo">
-            <h1>Beacon</h1>   
+            <img src="images/BOH-LOGO.png" alt="Beacon Logo">
+            <h1>Beacon</h1>
         </div>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         <ul class="flex">
             <li><a href="index.html">home</a></li>
             <li><a href="about-us.html">about us</a></li>
@@ -54,42 +55,11 @@
         </ul>
     </nav>
     <section class="about-us">
-        <div class="text" id="text1">Welcome to Beacon of Hope Academy</div>
-        <div class="text" id="text2">Empowering Students for a Bright Future</div>
-        <div class="text" id="text3">Nurturing Minds, Inspiring Hearts</div>
-    </section>
-    
-    <section class="gallery-section">
-        <div class="gallery-wrap">
-            <div class="gallery-images">
-                <div class="gallery">
-                    <div class="image-section">
-                        <img src="images/students/image 1.JPG" alt="Image 1">
-                    </div>
-                    <div class="caption">
-                        <p>Mission</p>
-                    </div>
-                </div>
-                <div class="gallery">
-                    <div class="image-section">
-                        <img src="images/background.JPG" alt="Image 2">
-                    </div>
-                    <div class="caption">
-                        <p>Vision</p>
-                    </div>
-                </div>
-                <div class="gallery">
-                    <div class="image-section">
-                        <img src="images/background.JPG" alt="Image 3">
-                    </div>
-                    <div class="caption">
-                        <p>Caption 3</p>
-                    </div>
-                </div>
-            </div>
+        <div class="text-wrapper">
+            <div class="text" id="text2"></div>
+            <div class="text" id="text3">Nurturing Minds, Inspiring Hearts</div>
         </div>
     </section>
-
     <footer class="footer">
         <div class="footer-col">
             <h4>Beacon of Hope</h4>
@@ -131,24 +101,28 @@
             </div>
         </div>
     </footer>
-
     <script>
         let currentIndex = 0;
         const texts = document.querySelectorAll('.about-us .text');
         const totalTexts = texts.length;
 
         function showNextText() {
-            texts[currentIndex].style.opacity = 0;
+            texts[currentIndex].classList.remove('visible');
             currentIndex = (currentIndex + 1) % totalTexts;
-            texts[currentIndex].style.opacity = 1;
-            texts[currentIndex].style.animation = 'none';  
-            setTimeout(() => {
-                texts[currentIndex].style.animation = '';  
-            }, 10);
+            texts[currentIndex].classList.add('visible');
         }
 
-        texts[currentIndex].style.opacity = 1;  
+        texts[currentIndex].classList.add('visible');
         setInterval(showNextText, 3000);
+
+        // Menu toggle for mobile view
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbarSecond = document.querySelector('.navbar-second');
+
+        menuToggle.addEventListener('click', () => {
+            navbarSecond.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
     </script>
 </body>
 </html>

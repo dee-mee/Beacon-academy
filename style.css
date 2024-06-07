@@ -31,11 +31,16 @@ nav {
 .navbar-one {
     background-color: rgb(12, 109, 199);
     height: 40px;
+    position: sticky;
+    top: auto;
 }
 
 .navbar-second {
     background-color: #0077C0;
     height: 70px;
+    position: sticky;
+    top: 40px;
+    z-index: 10;
 }
 
 .left > div + div, .right > div {
@@ -52,10 +57,17 @@ span {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     font-size: 24px;
     cursor: pointer;
     color: white;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
 }
 
 .dropdown {
@@ -101,12 +113,13 @@ a {
     position: relative;
     width: 100%;
     height: 50vh;
-    background: url('background.jpg') no-repeat center center/cover;
+    background: url('images/background.JPG') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
+    overflow: hidden;
 }
 
 .about-us::before {
@@ -120,6 +133,14 @@ a {
     z-index: 1;
 }
 
+.text-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .about-us .text {
     position: absolute;
     font-size: 3em;
@@ -127,6 +148,12 @@ a {
     transform: translateX(-100%);
     animation: slideIn 1s forwards;
     z-index: 2;
+    transition: opacity 1s, transform 1s;
+}
+
+.about-us .text.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @keyframes slideIn {
@@ -214,6 +241,46 @@ a {
 
     .navbar-one, .navbar-second {
         padding: 0 5px;
+    }
+
+    .navbar-second {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-second ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar-second.active ul {
+        display: flex;
+    }
+
+    .navbar-second ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .navbar-second ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+
+    .menu-toggle.active {
+        color: black;
     }
 }
 
