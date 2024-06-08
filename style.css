@@ -10,19 +10,20 @@ body {
     height: 100vh;
 }
 
-nav{
-    padding: 0 50px;
+nav {
+    padding: 0 20px;
     width: 100%;
     position: sticky;
     top: 0;
 }
 
-.flex{
+.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.navbar-one{
+
+.navbar-one {
     background-color: rgb(12, 109, 199);
     color: white;
     height: 40px;
@@ -34,16 +35,11 @@ nav{
     cursor: pointer;
 }
 
-.navbar-one {
-    background-color: rgb(12, 109, 199);
-    height: 40px;
+.navbar-second {
+    background-color: #0077C0;
+    height: 70px;
 }
 
-        
-.navbar-second{
-    background-color:#0077C0;
-    height: 70px;
-} 
 .left > div + div, .right > div {
     margin-left: 20px;
 }
@@ -79,7 +75,7 @@ span {
     display: none;
     position: absolute;
     background-color: rgb(12, 109, 199);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -143,7 +139,7 @@ a {
 
 .about-us .text {
     position: absolute;
-    font-size: 3em;
+    font-size: 2em;
     opacity: 0;
     transform: translateX(-100%);
     animation: slideIn 1s forwards;
@@ -282,7 +278,6 @@ a {
     }
 }
 
-
 @media (max-width: 768px) {
     .navbar-one .left, .navbar-one .right {
         flex-direction: column;
@@ -331,8 +326,11 @@ a {
     .navbar-second ul li {
         margin-bottom: 10px;
     }
-}
 
+    .about-us .text {
+        font-size: 1.5em;
+    }
+}
 
 .footer {
     background-color: #0077C0;
@@ -348,6 +346,7 @@ a {
     box-sizing: border-box;
     margin-bottom: 20px;
 }
+
 .footer-col h4 {
     margin-bottom: 10px;
 }
@@ -361,7 +360,6 @@ a {
 .footer-col ul li {
     margin-bottom: 10px;
 }
-
 
 .footer-col ul li a {
     color: #fff;
@@ -378,10 +376,10 @@ a {
     margin: 0;
     display: flex;
 }
+
 .social-links ul li {
     margin-right: 10px;
 }
-
 
 .social-links a {
     color: #fff;
