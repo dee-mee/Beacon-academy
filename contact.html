@@ -236,6 +236,10 @@
                 flex-direction: column;
                 align-items: flex-start;
                 width: 100%;
+                position: absolute;
+                top: 70px; /* Ensure it appears below the navbar */
+                background-color: #0077C0;
+                z-index: 1000;
             }
 
             .navbar-second.active ul {
@@ -387,16 +391,7 @@
         }
 
         footer .footer-col, footer .social-links {
-            flex: 1;
-            padding: 10px;
-            margin: 10px;
-            max-width: calc(33.33% - 20px);
-        }
-
-        @media screen and (max-width: 768px) {
-            footer .footer-col, footer .social-links {
-                max-width: 100%;
-            }
+            max-width: 100%;
         }
 
         @media screen and (max-width: 480px) {
@@ -420,7 +415,7 @@
     <nav class="navbar-second flex">
         <div class="logo">
             <img src="images/BOH-LOGO.png" alt="Beacon Logo">
-            <h1>Beacon</h1>   
+            <h1>Beacon</h1>
         </div>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -494,11 +489,13 @@
         </div>
     </footer>
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navbarSecond = document.querySelector('.navbar-second');
-        
-        menuToggle.addEventListener('click', () => {
-            navbarSecond.classList.toggle('active');
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbarSecond = document.querySelector('.navbar-second ul');
+
+            menuToggle.addEventListener('click', function () {
+                navbarSecond.classList.toggle('active');
+            });
         });
     </script>
 </body>
