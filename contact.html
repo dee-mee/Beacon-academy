@@ -10,139 +10,147 @@
 </head>
 <body>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        body{
+
+        body {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background-color: #0077C0;
         }
-        
-        nav{
-            padding: 0 50px;
+
+        nav {
+            padding: 0 20px;
             width: 100%;
             position: sticky;
             top: 0;
         }
-        
-        .flex{
+
+        .flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .navbar-one{
+
+        .navbar-one {
             background-color: rgb(12, 109, 199);
             color: white;
             height: 40px;
             cursor: pointer;
         }
-        
+
         .left > div + div {
-            margin-left: 40px;
-        
+            margin-left: 20px;
         }
-        
+
         .right > div {
-            margin-left: 40px;
+            margin-left: 20px;
         }
-        
+
         .left > div:hover,
         .right > div:hover {
-            color:black;
+            color: black;
             transition: all 0.5s;
         }
-        
+
         span {
             margin-left: 5px;
         }
-        
-        .navbar-second{
-            background-color:#0077C0;
+
+        .navbar-second {
+            background-color: #0077C0;
             height: 70px;
-        }  
-        
-        .logo{
+            padding: 0 20px;
+        }
+
+        .logo {
             text-transform: uppercase;
             font-size: 24px;
             cursor: pointer;
             color: white;
         }
-        
+
         li {
             list-style: none;
         }
+
         .dropdown {
             position: relative;
-          }
-          
-          .dropdown-menu {
+        }
+
+        .dropdown-menu {
             position: absolute;
             top: 100%;
             left: 0;
             background-color: #0077C0;
             padding: 10px;
             display: none;
-          }
-          
-          .dropdown-menu li {
+        }
+
+        .dropdown-menu li {
             margin-bottom: 10px;
-          }
-          
-          .dropdown-menu li a {
+        }
+
+        .dropdown-menu li a {
             color: #fff;
             text-decoration: none;
-          }
-          
-          .dropdown:hover .dropdown-menu {
+        }
+
+        .dropdown:hover .dropdown-menu {
             display: block;
-          }
+        }
+
         a {
             text-decoration: none;
             text-transform: capitalize;
             font-size: 16px;
-            margin-left: 30px;
+            margin-left: 20px;
             color: white;
             font-weight: 400;
         }
-         .container{
+
+        .container {
             position: relative;
             width: 100%;
-            height: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-         }
-         .container-box{
+        }
+
+        .container-box {
             max-width: 860px;
             display: grid;
             grid-gap: 10px;
             grid-template-columns: repeat(2, 1fr);
             background-color: #0077C0;
             box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.19);
-         }   
-         .right iframe{
+        }
+
+        .right iframe {
             padding: 10px 10px;
             width: 100%;
             height: 470px;
-         }
-         .left {
+        }
+
+        .left {
             padding: 25px 40px;
             width: 100%;
-            text-align: center; /* Center-align the content */
-         }
-         h2 {
+            text-align: center;
+        }
+
+        h2 {
             position: relative;
             padding: 0 0 10px;
             margin-bottom: 10px;
-            text-align: center; /* Center-align the heading */
-         }
-         h2:after{
+            text-align: center;
+        }
+
+        h2:after {
             position: absolute;
             content: "";
             left: 50%;
@@ -152,8 +160,9 @@
             height: 4px;
             background-color: #0077C0;
             border-radius: 2px;
-         }
-         .field {
+        }
+
+        .field {
             width: 100%;
             border: 2px solid #0077C0;
             outline: none;
@@ -161,14 +170,16 @@
             padding: .5rem 1rem;
             margin-bottom: 22px;
             transition: .3s;
-         }
-         .field:hover{
-            background-color: white !important;
+        }
 
-         }
-         textarea{
+        .field:hover {
+            background-color: white !important;
+        }
+
+        textarea {
             min-height: 150px;
-         }
+        }
+
         .btn {
             width: 100%;
             padding: .5rem 1rem;
@@ -178,23 +189,14 @@
             border: none;
             outline: none;
             cursor: pointer;
-            transition:.3s;
-        } 
+            transition: .3s;
+        }
 
-        .field:focus{
-            border: 2px solid rgba(30, 85,250, .7);
+        .field:focus {
+            border: 2px solid rgba(30, 85, 250, .7);
             background: #fff;
         }
-         @media screen  and (max-width:769px) {
-            .contact-box{
-                grid-template-columns: 1fr; 
-            }
-            .left iframe{
-                padding: 0;
-            }
-         }
-     
-        
+
         .contact-box {
             display: flex;
             justify-content: space-between;
@@ -202,145 +204,134 @@
             flex-wrap: wrap;
             position: relative;
             width: 100%;
-            height: 100%;
         }
-        
-        .left {
-            padding: 25px 40px;
-            width: 100%;
-            max-width: 600px;
-        }
-        
-        .right {
-            width: 100%;
-            max-width: 600px;
-        }
-        
-@media screen and (max-width: 992px) {
-    .gallery-section .gallery-wrap .gallery-images {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .navbar-one, .navbar-second {
-        padding: 0 10px;
-    }
-}
-
-@media screen and (max-width: 568px) {
-    .gallery-section .gallery-wrap .gallery-images {
-        grid-template-columns: 1fr;
-    }
-
-    .navbar-one, .navbar-second {
-        padding: 0 5px;
-    }
-
-    .navbar-second {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-second ul {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .navbar-second.active ul {
-        display: flex;
-    }
-
-    .navbar-second ul li {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .navbar-second ul li a {
-        display: block;
-        width: 100%;
-        padding: 10px 20px;
-        box-sizing: border-box;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        color: white;
-    }
-
-    .menu-toggle.active {
-        color: #fff;
-        background-attachment: fixed;
-        background-color: #0077C0;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .navbar-one .left, .navbar-one .right {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-one .left div, .navbar-one .right div {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-
-    .navbar-second ul {
-        flex-direction: column;
-    }
-
-    .navbar-second ul li {
-        margin-bottom: 10px;
-    }
-
-    .gallery {
-        width: calc(50% - 20px);
-    }
-
-    .footer-col {
-        width: calc(50% - 10px);
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        width: 100%;
-    }
-
-    .footer-col {
-        width: 100%;
-    }
-
-    .navbar-second .logo h1 {
-        font-size: 1.5em;
-    }
-
-    .navbar-second ul {
-        flex-direction: column;
-    }
-
-    .navbar-second ul li {
-        margin-bottom: 10px;
-    }
-}
-
-
-        @media screen and (min-width: 769px) {
-           .contact-box {
-                justify-content: space-around;
+        @media screen and (max-width: 992px) {
+            .container-box {
+                grid-template-columns: 1fr;
             }
-           .left {
-                padding: 25px 40px;
-            }
-           .right {
+
+            .navbar-one, .navbar-second {
                 padding: 0 10px;
             }
         }
+
+        @media screen and (max-width: 568px) {
+            .container-box {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar-one, .navbar-second {
+                padding: 0 5px;
+            }
+
+            .navbar-second {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar-second ul {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .navbar-second.active ul {
+                display: flex;
+            }
+
+            .navbar-second ul li {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .navbar-second ul li a {
+                display: block;
+                width: 100%;
+                padding: 10px 20px;
+                box-sizing: border-box;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 24px;
+                color: white;
+            }
+
+            .menu-toggle.active {
+                color: #fff;
+                background-attachment: fixed;
+                background-color: #0077C0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-one .left, .navbar-one .right {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar-one .left div, .navbar-one .right div {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .navbar-second ul {
+                flex-direction: column;
+            }
+
+            .navbar-second ul li {
+                margin-bottom: 10px;
+            }
+
+            .gallery {
+                width: calc(50% - 20px);
+            }
+
+            .footer-col {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                width: 100%;
+            }
+
+            .footer-col {
+                width: 100%;
+            }
+
+            .navbar-second .logo h1 {
+                font-size: 1.5em;
+            }
+
+            .navbar-second ul {
+                flex-direction: column;
+            }
+
+            .navbar-second ul li {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .contact-box {
+                justify-content: space-around;
+            }
+
+            .left {
+                padding: 25px 40px;
+            }
+
+            .right {
+                padding: 0 10px;
+            }
+        }
+
         footer {
             background-color: #0077C0;
             padding: 20px;
@@ -349,70 +340,81 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        
+
         .footer-col {
             margin: 20px;
             width: 20%;
         }
-        
+
         .footer-col ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .footer-col li {
             margin-bottom: 10px;
         }
-        
+
         .footer-col a {
             color: #fff;
             text-decoration: none;
         }
-        
+
         .footer-col a:hover {
             color: #ccc;
         }
-        
+
         .social-links ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
         }
-        
+
         .social-links li {
             margin-right: 20px;
         }
-        
+
         .social-links a {
             color: #fff;
             text-decoration: none;
         }
-        
+
         .social-links a:hover {
             color: #ccc;
         }
-        .social-links ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
+
+        footer .footer-col, footer .social-links {
+            flex: 1;
+            padding: 10px;
+            margin: 10px;
+            max-width: calc(33.33% - 20px);
         }
-        
-        .social-links li {
-            margin-right: 20px;
+
+        @media screen and (max-width: 768px) {
+            footer .footer-col, footer .social-links {
+                max-width: 100%;
+            }
         }
-        
-        .social-links a {
-            color: #fff;
-            text-decoration: none;
+
+        @media screen and (max-width: 480px) {
+            .footer {
+                display: block;
+            }
+
+            .footer-col {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .footer .social-links {
+                width: 100%;
+                margin: 10px 0;
+                display: flex;
+                justify-content: center;
+            }
         }
-        
-        .social-links a:hover {
-            color: #ccc;
-        }
-        
     </style>
     <nav class="navbar-one flex">
         <div class="left flex">
@@ -421,10 +423,10 @@
                 <span>info@yourdomain.com</span>
             </div>
             <div class="call">
-               <i class="fa fa-phone-alt"></i>
+                <i class="fa fa-phone-alt"></i>
                 <span>+1234567890</span>
-               </div>
             </div>
+        </div>
         <div class="right flex">
             <div class="twitter">  	
                 <i class="fab fa-twitter"></i>
@@ -459,62 +461,63 @@
             <li><a href="contact.html">contact us</a></li>
         </ul>
     </nav>
-    <img src="images/contact.png" alt="">
     <div class="container">
-        <div class="contact-box">
-            <div class="right">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6369922723165!2d36.76049007416703!3d-1.394302635752033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05b0eb95a0eb%3A0xfb77903c7dbc4b18!2sBeacon%20Of%20Hope!5e0!3m2!1sen!2ske!4v1717604347128!5m2!1sen!2ske"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+        <div class="container-box">
             <div class="left">
-                <h2>contact us</h2>
-                <input type="text" class="field" placeholder="Enter your name">
-                <input type="text" class="field" placeholder="Enter your Email">
-                <input type="text" class="field" placeholder="Enter your Phone">
-                <textarea placeholder="Message" class="field"></textarea>
-                <button class="btn">Send</button>
+                <h2>Contact Us</h2>
+                <form>
+                    <input type="text" class="field" placeholder="Full Name">
+                    <input type="email" class="field" placeholder="Email">
+                    <textarea class="field" placeholder="Message"></textarea>
+                    <button type="submit" class="btn">Send</button>
+                </form>
             </div>
-        </div> 
+            <div class="right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2739826588387!2d-74.00594118459423!3d40.712775779330734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316a2e27a3%3A0x42e69d172b3ae429!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1663916442513!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="footer-col">
-            <h4>Beacon of Hope</h4>
+            <h4>About Us</h4>
             <ul>
-                <li><a href="#">about us</a></li>
-                <li><a href="">our services</a></li>
-                <li><a href="">privacy policy</a></li>
-                <li><a href="">affiliate program</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Mission & Vision</a></li>
+                <li><a href="#">Leadership</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <h4>get help</h4>
+            <h4>Quick Links</h4>
             <ul>
-                <li><a href="#">faq</a></li>
-                <li><a href="">shipping</a></li>
-                <li><a href="">returns</a></li>
-                <li><a href="#">payment options</a></li>
-                <li><a href="">order status</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Support Us</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <h4>Online admission</h4>
+            <h4>Contact</h4>
             <ul>
-                <li><a href="#">Application form</a></li>
-                <li><a href="#">students</a></li>
-                <li><a href="#">Teachers</a></li>
-                <li><a href="#">activities</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Phone</a></li>
+                <li><a href="#">Address</a></li>
             </ul>
         </div>
-        <div class="footer-col">
-            <h4>follow us</h4>
-            <div class="social-links">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                </ul>
-            </div>
+        <div class="social-links">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
         </div>
     </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbarSecond = document.querySelector('.navbar-second');
+        
+        menuToggle.addEventListener('click', () => {
+            navbarSecond.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
