@@ -216,6 +216,120 @@
             max-width: 600px;
         }
         
+@media screen and (max-width: 992px) {
+    .gallery-section .gallery-wrap .gallery-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar-one, .navbar-second {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .gallery-section .gallery-wrap .gallery-images {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar-one, .navbar-second {
+        padding: 0 5px;
+    }
+
+    .navbar-second {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-second ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar-second.active ul {
+        display: flex;
+    }
+
+    .navbar-second ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .navbar-second ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+
+    .menu-toggle.active {
+        color: #fff;
+        background-attachment: fixed;
+        background-color: #0077C0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar-one .left, .navbar-one .right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-one .left div, .navbar-one .right div {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .navbar-second ul {
+        flex-direction: column;
+    }
+
+    .navbar-second ul li {
+        margin-bottom: 10px;
+    }
+
+    .gallery {
+        width: calc(50% - 20px);
+    }
+
+    .footer-col {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        width: 100%;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .navbar-second .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .navbar-second ul {
+        flex-direction: column;
+    }
+
+    .navbar-second ul li {
+        margin-bottom: 10px;
+    }
+}
+
+
         @media screen and (min-width: 769px) {
            .contact-box {
                 justify-content: space-around;

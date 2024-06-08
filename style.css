@@ -276,7 +276,9 @@ a {
     }
 
     .menu-toggle.active {
-        color: black;
+        color: #fff;
+        background-attachment: fixed;
+        background-color: #0077C0;
     }
 }
 
