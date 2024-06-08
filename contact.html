@@ -130,6 +130,7 @@
             background-color: #0077C0;
             box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.19);
         }
+
         .background-image {
             width: 100%;
             height: 300px;
@@ -244,6 +245,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                height: auto; /* Ensure the height is auto to accommodate the menu */
             }
 
             .navbar-second ul {
@@ -251,10 +253,9 @@
                 flex-direction: column;
                 align-items: flex-start;
                 width: 100%;
-                position: absolute;
-                top: 70px; /* Ensure it appears below the navbar */
                 background-color: #0077C0;
                 z-index: 1000;
+                position: static;
             }
 
             .navbar-second.active ul {
@@ -471,8 +472,7 @@
                 </form>
             </div>
             <div class="right">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.2739826588387!2d-74.00594118459423!3d40.712775779330734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316a2e27a3%3A0x42e69d172b3ae429!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1663916442513!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6369922723165!2d36.76049007416703!3d-1.394302635752033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05b0eb95a0eb%3A0xfb77903c7dbc4b18!2sBeacon%20Of%20Hope!5e0!3m2!1sen!2ske!4v1717842014262!5m2!1sen!2ske" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
         </div>
     </div>
     <footer>
