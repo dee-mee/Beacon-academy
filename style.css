@@ -62,7 +62,7 @@ nav {
 }
 .heading p{
     font-size: 18px;
-    color: #666;
+    color: #000;
     margin-bottom: 35px;
 }
 .container{
@@ -95,13 +95,13 @@ nav {
 } 
 .about-content h2 {
     font-size: 23px;
-    color: #333;
+    color: #000;
     margin-bottom: 15px;
 }
 .about-content p{
     font-size: 18px;
     line-height: 1.5;
-    color: #666;
+    color: #000;
 }
 .about-content .read-more{
     display: inline-block;
