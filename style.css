@@ -168,19 +168,21 @@ a {
 .gallery-section .gallery-wrap .gallery-images {
     width: 80%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-top: 50px;
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .gallery-section .gallery-wrap .gallery-images .gallery {
     width: 100%;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .gallery-section .gallery-wrap .gallery-images .image-section {
-    width: 100%;
+    width: calc(25% - 20px); /* Four images per row */
 }
 
 .gallery-section .gallery-wrap .gallery-images .image-section img {
@@ -210,17 +212,9 @@ a {
     flex-direction: column;
 }
 
-.gallery-section .gallery-wrap .gallery-images .gallery .caption:hover {
-    opacity: 1;
-}
-
-.gallery-section .gallery-wrap .gallery-images .gallery .caption p {
-    font-size: 13px !important;
-}
-
 @media screen and (max-width: 992px) {
-    .gallery-section .gallery-wrap .gallery-images {
-        grid-template-columns: repeat(2, 1fr);
+    .gallery-section .gallery-wrap .gallery-images .image-section {
+        width: calc(50% - 20px); /* Two images per row */
     }
 
     .navbar-one, .navbar-second {
@@ -228,9 +222,42 @@ a {
     }
 }
 
+.category-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #0077C0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.category-btn:hover, .category-btn.active {
+    background-color: #005fa3;
+}
+
+.gallery {
+    display: none; /* Initially hide all items */
+}
+
+.gallery.active {
+    display: flex; 
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
 @media screen and (max-width: 568px) {
-    .gallery-section .gallery-wrap .gallery-images {
-        grid-template-columns: 1fr;
+    .gallery-section .gallery-wrap .gallery-images .image-section {
+        width: 100%; /* One image per row */
     }
 
     .navbar-one, .navbar-second {
@@ -334,6 +361,38 @@ a {
     }
 }
 
+.activities {
+    padding: 50px 20px;
+    background: #f1f8e9;
+}
+
+.activities h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.activity-section {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.activity-section img {
+    height: 150px;
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.activity-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.activity-section p {
+    margin: 0;
+}
+
 .footer {
     background-color: #0077C0;
     padding: 20px;
@@ -377,17 +436,18 @@ a {
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: space-between;
 }
 
 .social-links ul li {
-    margin-right: 10px;
+    margin: 0 5px;
 }
 
-.social-links a {
+.social-links ul li a {
     color: #fff;
-    text-decoration: none;
+    font-size: 18px;
 }
 
-.social-links a:hover {
+.social-links ul li a:hover {
     color: #ccc;
 }
