@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <meta name="description" content="Beacon of Hope Academy - Providing quality and affordable education while instilling values in young men.">
+
 </head>
 <body>
     <nav class="navbar-one flex">
@@ -85,7 +87,7 @@
         </section>
     </div>
     <div class="wrapper">
-        <img src="images/students/image 1.JPG" alt="">
+        <img src="images/director.jpg" alt="">
         <div class="text-box">
             <h2>Director Beacon</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem blanditiis velit odit 
@@ -97,51 +99,53 @@
               Facilis, eos? Laborum, alias reprehenderit!</p>
         </div>
     </div>
-
-    <h2>Board managers</h2>
-    <div class="row">
-        <div class="column">
-            <div class="image-container">
-                <img src="images/students/image 1.JPG" alt="" width="100%">
-                <div class="overlay">
-                    <div class="text">Image 1 Description</div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="image-container">
-                <img src="images/students/image 2.JPG" alt="" width="100%">
-                <div class="overlay">
-                    <div class="text">Image 2 Description</div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="image-container">
-                <img src="images/students/image 3.JPG" alt="" width="100%">
-                <div class="overlay">
-                    <div class="text">Image 3 Description</div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="image-container">
-                <img src="images/students/image 4.JPG" alt="" width="100%">
-                <div class="overlay">
-                    <div class="text">Image 4 Description</div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="image-container">
-                <img src="images/students/image 5.JPG" alt="" width="100%">
-                <div class="overlay">
-                    <div class="text">Image 5 Description</div>
-                </div>
-            </div>
-        </div>
-    </div>
- 
+<div class="cover">
+ <div class="box">
+    <img src="images/director.jpg" alt="">
+    <h2>Our Mission</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Quisquam a reprehenderit est aut quibusdam ipsa amet sequi exercitationem, 
+        recusandae architecto hic molestias eveniet itaque deleniti cumque dolor soluta impedit provident.</p>
+ </div>
+ <div class="box">
+    <img src="images/miss ella.JPG" alt="">
+    <h2>Our Mission</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptas ducimus suscipit illo nam incidunt dolorum id doloremque, possimus hic 
+        assumenda, velit necessitatibus molestias
+         perferendis tempora deserunt veniam ipsam qui atque.</p>
+ </div>
+ <div class="box">
+    <img src="images/director.jpg" alt="">
+    <h2>Our Mission</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Ducimus consequatur odio nesciunt quidem reprehenderit dolorum,
+         labore aperiam, eius quis, nihil error architecto recusandae.
+         Soluta, expedita nemo laudantium quidem laboriosam quae.</p>
+ </div>
+ <div class="box">
+    <img src="images/director.jpg" alt="">
+    <h2>Our Mission</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Sint, minus facilis perferendis necessitatibus illo doloribus placeat quam 
+         voluptatum nihil quidem temporibus soluta deserunt possimus enim. Molestias itaque
+          voluptatibus incidunt obcaecati!</p>
+ </div>
+ </div>
+ <ul class="wrapper">
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    
+</ul>
+ <div class="paragraph">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut illum est maiores cumque dolore id officia, similique modi harum consectetur facilis! Assumenda ullam neque explicabo illo consequatur molestiae earum similique?
+    Inventore in mollitia nam voluptatibus cum eos dolor dolore, sunt sit maiores quas assumenda aperiam rerum omnis fugiat cumque laudantium ut quis molestias? Id fuga beatae nemo iste voluptatum ab!
+    Facilis nisi libero natus similique doloribus, asperiores iusto placeat accusamus commodi officia deserunt temporibus. Commodi tenetur quis quisquam enim quasi, sint nihil non mollitia, veritatis provident consequatur placeat vero hic?</p>
+ </div>
     <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i></a>
    <footer class="footer">
         <div class="footer-col">
@@ -185,18 +189,20 @@
         </div>
     </footer>
     <script>
-        let currentIndex = 0;
-        const texts = document.querySelectorAll('.about-us .text');
-        const totalTexts = texts.length;
+        (function() {
+            let currentIndex = 0;
+            const texts = document.querySelectorAll('.about-us .text');
+            const totalTexts = texts.length;
 
-        function showNextText() {
-            texts[currentIndex].classList.remove('visible');
-            currentIndex = (currentIndex + 1) % totalTexts;
+            function showNextText() {
+                texts[currentIndex].classList.remove('visible');
+                currentIndex = (currentIndex + 1) % totalTexts;
+                texts[currentIndex].classList.add('visible');
+            }
+
             texts[currentIndex].classList.add('visible');
-        }
-
-        texts[currentIndex].classList.add('visible');
-        setInterval(showNextText, 3000);
+            setInterval(showNextText, 3000);
+        })();
 
         // Menu toggle for mobile view
         const menuToggle = document.querySelector('.menu-toggle');
