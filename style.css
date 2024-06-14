@@ -249,14 +249,14 @@ h2{
 }
 .wrapper{
     margin: 150px auto;
-    width: 70%;
+    width: 50%;
 }
 .img_deg{
-    max-width: 400px;
+    max-width: 350px;
     float: right;
     border: 3px solid #fff;
     border-radius: 10px;
-    margin-left: 10px;
+    margin-left: 5px;
     display: flex;
 }
 .text-box{
