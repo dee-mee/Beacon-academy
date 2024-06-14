@@ -192,20 +192,6 @@
             menuToggle.classList.toggle('active');
         });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const textElement = document.querySelector('.sliding-text p');
-    const texts = [
-        "This is sliding text over the image.",
-        "Here is another text message.",
-        "And here is yet another one."
-    ];
-    let index = 0;
-
-    setInterval(() => {
-        index = (index + 1) % texts.length;
-        textElement.textContent = texts[index];
-    }, 5000); // Change text every 5 seconds
-});
 document.addEventListener("DOMContentLoaded", function() {
     let elements = document.querySelectorAll('.fade-in');
     elements.forEach(function(element) {

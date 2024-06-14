@@ -248,19 +248,22 @@ h2{
     margin-bottom: 0.2em;
 }
 .wrapper{
-    margin: 150px auto;
-    width: 50%;
-}
+    margin: 170px;
+    width: 60%;
+ }
 .img_deg{
-    max-width: 350px;
+    max-width: 400px;
     float: right;
     border: 3px solid #fff;
     border-radius: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
     display: flex;
 }
 .text-box{
     color: #000;
+    margin-right: 50px;
+    text-align: absolute;
+
 }
 .text-box h2{
     font-size: 32px;
