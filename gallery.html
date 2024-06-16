@@ -3,293 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beacon of Hope Academy</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="images.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>car Image Gallery</title>
 </head>
 <body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800;900&display=swap');
 
-    <nav class="navbar-one flex">
-        <div class="left flex">
-            <div class="email">
-                <i class="fa fa-envelope"></i>
-                <span>info@yourdomain.com</span>
-            </div>
-            <div class="call">
-                <i class="fa fa-phone-alt"></i>
-                <span>+254703304489</span>
-            </div>
-        </div>
-        <div class="right flex">
-            <div class="twitter">
-                <i class="fab fa-twitter"></i>
-                <span>Twitter</span>
-            </div>
-            <div class="facebook">
-                <i class="fab fa-facebook"></i>
-                <span>facebook</span>
-            </div>
-        </div>
-    </nav>
-    <nav class="navbar-second flex">
-        <div class="logo">
-            <img src="images/BOH-LOGO.png" alt="Beacon Logo">
-            <h1>Beacon</h1>
-        </div>
-        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        <ul class="flex">
-            <li><a href="index.html">home</a></li>
-            <li><a href="about-us.html">about us</a></li>
-            <li class="dropdown">
-                <a href="schools.html">schools</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Kindergarten</a></li>
-                    <li><a href="#">Academy</a></li>
-                    <li><a href="#">Junior</a></li>
-                </ul>
-            </li>
-            <li><a href="activities.html">activities</a></li>
-            <li><a href="feestructure.html">School fees</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="https://forms.gle/8jrWctRhj6CxEGAU6">Enquiry</a></li>
-            <li><a href="contact.html">contact us</a></li>
-        </ul>
-    </nav>
-    <div class="desktop_7" unique-script-id="w-w-dm-id">
-        <div class="responsive-container-block bigContainer">
-          <div class="responsive-container-block Container">
-            <p class="text-blk headingText">
-              Gallery
-            </p>
-            <div class="responsive-container-block optionsContainer">
-              <p class="text-blk list all active" data-filter="all">
-               All
-              </p>
-              <p class="text-blk list" data-filter="one">
-               Students
-              </p>
-              <p class="text-blk list" data-filter="two">
-                Events
-              </p>
-              <p class="text-blk list" data-filter="three">
-               Structures
-              </p>
-              <p class="text-blk list" data-filter="four">
-               Staff
-              </p>
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    background: linear-gradient(to right, #d7d2cc, #fff);
+}
+
+
+.heading{
+  display:flex;
+  justify-content: center;
+}
+
+h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 5px;
+    border-bottom: 4px solid rgb(20, 2, 177);
+    width: fit-content;
+    color: #444;
+
+}
+
+.gallery{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 120px;
+    padding: 0 4rem;
+    margin: 2rem auto;
+    
+}
+
+.gallery:hover .box{
+    filter: blur(4px);
+}
+
+.box{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.4s ease-in-out;
+    border-radius: 8px;
+}
+
+.gallery .box:hover{
+    filter: blur(0);
+}
+
+
+.col{
+    grid-row: span 3;
+}
+
+.row{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.row-3{
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+  </style>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beacon of Hope Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Beacon of Hope Academy - Providing quality and affordable education while instilling values in young men.">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar-one flex">
+            <div class="left flex">
+                <div class="email">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>info@yourdomain.com</span>
+                </div>
+                <div class="call">
+                    <i class="fa fa-phone-alt" aria-hidden="true"></i>
+                    <span>+1234567890</span>
+                </div>
             </div>
-            <div class="responsive-container-block imageContainer">
-              <div class="project">
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">
-                      Close X
-                    </button>
-                    <div class="hdImgs">
-                      <img alt="" class="againImg" src="images/students/image 1.JPG">
-                    </div>
-                  </div>
+            <div class="right flex">
+                <div class="twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span>Twitter</span>
                 </div>
-                <img class="squareImg one" src="images/students/image 1.JPG">
-                <div class="btn-box">
-                  <button class="btn">
-                    View
-                  </button>
+                <div class="facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                    <span>Facebook</span>
                 </div>
-              </div>
-              <div class="project">
-                <img class="squareImg two" src="images/students/image 2.JPG">
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">
-                      Close X
-                    </button>
-                    <div class="hdImgs">
-                      <img class="squareImg two" src="images/students/image 3.JPG">
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">
-                    View
-                  </button>
-                </div>
-              </div>
-              <div class="project">
-                <img class="squareImg three" src="images/students/image 4.JPG">
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">
-                      Close X
-                    </button>
-                    <div class="hdImgs">
-                      <img alt="" class="againImg" src="images/students/image 5.JPG">
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">
-                    View
-                  </button>
-                </div>
-              </div>
-              <div class="project">
-                <img class="squareImg four" src="images/students/image 5.JPG">
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">
-                      Close X
-                    </button>
-                    <div class="hdImgs">
-                      <img alt="" class="againImg" src="images/students/image 4.JPG">
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">
-                    View
-                  </button>
-                </div>
-              </div>
-              <div class="project">
-                <img class="squareImg five" src="images/students/image 4.JPG">
-                <div class="hdImg">
-                  <img alt="" class="againImg" src="images/students/image 4.JPG">
-                </div>
-                <div class="btn-box">
-                  <button class="btn">
-                    View
-                  </button>
-                </div>
-              </div>
-              <div class="project">
-                <img class="squareImg one" src="images/students/image 4.JPG">
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">
-                      Close X
-                    </button>
-                    <div class="hdImgs">
-                      <img alt="" class="againImg" src="images/students/image 4.JPG">
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">
-                    View
-                  </button>
-                </div>
-              </div>
-              <div class="project">
-                <img class="squareImg two" src="images/students/image 4.JPG">
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">
-                      Close X
-                    </button>
-                    <div class="hdImgs">
-                      <img alt="" class="againImg" src="images/students/image 4.JPG">
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">
-                    View
-                  </button>
-                </div>
-              </div>
-              <div class="project">
-                <img class="squareImg three" src="images/students/image 4.JPG">
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">
-                      Close X
-                    </button>
-                    <div class="hdImgs">
-                      <img alt="" class="againImg" src="images/students/image 4.JPG">
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">
-                    View
-                  </button>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
+        </nav>
+        <nav class="navbar-second flex">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="logo">
+                <img src="images/BOH-LOGO.png" alt="Beacon Logo">
+                <h1>Beacon</h1>
+            </div>
+            <ul class="flex">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="schools.html">Schools <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Kindergarten</a></li>
+                        <li><a href="#">Academy</a></li>
+                        <li><a href="#">Junior</a></li>
+                    </ul>
+                </li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="feestructure.html">School Fees</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="https://forms.gle/8jrWctRhj6CxEGAU6">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    <div class="heading">
+      <h1>Beacon of Hope Gallery</h1>
+  </div>
+
+    <main class="gallery">
+        <div class="box" style="background-image: url(./images/images/32.jpg);"></div>
+        <div class="box row" style="background-image: url(./images/images/16.jpg);"></div>
+        <div class="box col" style="background-image: url(./images/images/9.jpg);"></div>
+        <div class="box row" style="background-image: url(./images/images/10.JPG);"></div>
+        <div class="box col" style="background-image: url(./images/images/7.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/3.JPG);"></div>
+        <div class="box " style="background-image: url(./images/images/18.JPG);"></div>
+        <div class="box " style="background-image: url(./images/images/6.JPG);"></div>
+        <div class="box " style="background-image: url(./images/images/7.JPG);"></div>
+        <div class="box " style="background-image: url(./images/images/8.JPG);"></div>
+        <div class="box row" style="background-image: url(./images/images/11.JPG);"></div>
+        <div class="box row" style="background-image: url(./images/images/17.jpg);"></div>
+        <div class="box row-3" style="background-image: url(./images/images/1.jpg);"></div>
+        <div class="box row" style="background-image: url(./images/images/19.JPG);"></div>
+        <div class="box col" style="background-image: url(./images/images/5.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/14.jpg);"></div>
+        <div class="box" style="background-image: url(./images/images/15.jpg);"></div>
+        <div class="box" style="background-image: url(./images/images/31.jpg);"></div>
+        <div class="box row" style="background-image: url(./images/images/16.jpg);"></div>
+        <div class="box col" style="background-image: url(./images/images/4.jpg);"></div>
+        <div class="box row" style="background-image: url(./images/images/10.JPG);"></div>
+        <div class="box col" style="background-image: url(./images/images/13.jpg);"></div>
+        <div class="box" style="background-image: url(./images/images/2.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/35.jpg);"></div>
+        <div class="box " style="background-image: url(./images/images/18.JPG);"></div>
+        <div class="box " style="background-image: url(./images/images/12.jpg);"></div>
+        <div class="box row" style="background-image: url(./images/images/11.JPG);"></div>
+        <div class="box row" style="background-image: url(./images/images/17.jpg);"></div>
+        <div class="box row-3" style="background-image: url(./images/images/1.jpg);"></div>
+        <div class="box row" style="background-image: url(./images/images/21.JPG;"></div>
+        <div class="box col" style="background-image: url(./images/images/5.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/20.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/15.jpg);"></div>
+        <div class="box" style="background-image: url(./images/images/22.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/23.jpg);"></div>
+        <div class="box" style="background-image: url(./images/images/24.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/25.jpg);"></div>
+        <div class="box" style="background-image: url(./images/images/26.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/27.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/28.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/29.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/30.jpg);"></div>
+        <div class="box" style="background-image: url(./images/images/33.JPG);"></div>
+        <div class="box" style="background-image: url(./images/images/34.JPG);"></div>
+     
+        <div class="box" style="background-image: url(./images/images/36.jpg);"></div>
+    </main>
+    <footer class="footer">
+      <div class="footer-col">
+          <h4>Beacon of Hope</h4>
+          <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+          </ul>
       </div>
-      <footer class="footer">
-        <div class="footer-col">
-            <h4>Beacon of Hope</h4>
-            <ul>
-                <li><a href="#">about us</a></li>
-                <li><a href="#">our services</a></li>
-                <li><a href="#">privacy policy</a></li>
-                <li><a href="#">affiliate program</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>get help</h4>
-            <ul>
-                <li><a href="#">faq</a></li>
-                <li><a href="#">shipping</a></li>
-                <li><a href="#">returns</a></li>
-                <li><a href="#">payment options</a></li>
-                <li><a href="#">order status</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Online admission</h4>
-            <ul>
-                <li><a href="#">Application form</a></li>
-                <li><a href="#">students</a></li>
-                <li><a href="#">Teachers</a></li>
-                <li><a href="#">activities</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>follow us</h4>
-            <div class="social-links">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-
-            $("[unique-script-id='w-w-dm-id'] .btn-box").click(function() {
-              $(this).parent().children(".overlay").show();
-          
-            });
-          
-          
-            $("[unique-script-id='w-w-dm-id'] .close").click(function() {
-              $(".overlay").hide();
-            });
-          
-            $("[unique-script-id='w-w-dm-id'] .list").click(function() {
-              const value = $(this).attr('data-filter');
-              if (value == 'all') {
-                $("[unique-script-id='w-w-dm-id'] .squareImg").show('1000');
-              } else {
-                $("[unique-script-id='w-w-dm-id'] .squareImg").not('.' + value).hide('1000');
-                $("[unique-script-id='w-w-dm-id'] .squareImg").filter('.' + value).show('1000');
-              }
-            })
-            $("[unique-script-id='w-w-dm-id'] .list").click(function() {
-              $(this).addClass('active').siblings().removeClass('active');
-            })
-          })
-    </script>
+      <div class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Admissions</a></li>
+              <li><a href="#">School Fees</a></li>
+              <li><a href="#">Scholarships</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+      </div>
+      <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+  </footer>
 </body>
 </html>
