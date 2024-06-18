@@ -135,20 +135,23 @@
     <div class="gallery-example">
         <h3>Beacon of Hope Gallery</h3>
         <div class="pictures">
-            <img src="images/images/31.jpg" alt="Gallery Image 1">
-            <img src="images/images/20.JPG" alt="Gallery Image 2">
-            <img src="images/images/36.jpg" alt="Gallery Image 3">
-            <img src="images/images/34.JPG" alt="Gallery Image 4">
-            <img src="images/images/32.jpg" alt="Gallery Image 5">
-            <img src="images/images/33.JPG" alt="Gallery Image 6">
-            <img src="images/images/8.JPG" alt="Gallery Image 7">
-            <img src="images/images/10.JPG" alt="Gallery Image 8">
+            <img src="images/images/31.jpg" alt="Gallery Image 1" onclick="openModal(this)">
+            <img src="images/images/35.jpg" alt="Gallery Image 2" onclick="openModal(this)">
+            <img src="images/images/36.jpg" alt="Gallery Image 3" onclick="openModal(this)">
+            <img src="images/images/34.JPG" alt="Gallery Image 4" onclick="openModal(this)">
+            <img src="images/images/32.jpg" alt="Gallery Image 5" onclick="openModal(this)">
+            <img src="images/images/33.JPG" alt="Gallery Image 6" onclick="openModal(this)">
+            <img src="images/images/8.JPG" alt="Gallery Image 7" onclick="openModal(this)">
+            <img src="images/images/10.JPG" alt="Gallery Image 8" onclick="openModal(this)">
         </div>
         <a href="gallery.html" class="view-more-button">View More</a>
     </div>
     
-    <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
-
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+    
     <footer class="footer">
         <div class="footer-col">
             <h4>Beacon of Hope</h4>
@@ -208,6 +211,18 @@
                 nav.classList.remove("active");
             }
         });
+        function openModal(imgElement) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+        
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+        
     </script>
 </body>
 </html>
