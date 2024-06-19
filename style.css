@@ -12,7 +12,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     background: #fff;
-
+    list-style: none;
 }
 
 /* Navbar styling */
@@ -32,6 +32,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: #f0f0f0;
+    list-style: none;
 }
 
 .navbar-one .left, .navbar-one .right {
@@ -66,6 +67,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    list-style: none;
 }
 
 .navbar-second .logo {
@@ -88,6 +90,7 @@ body {
     display: flex;
     gap: 20px;
     margin-left: auto;
+    list-style: none;
 }
 
 .navbar-second li {
@@ -99,6 +102,7 @@ body {
     font-weight: bold;
     padding: 10px 15px;
     display: block;
+    text-decoration: none;
 }
 
 .navbar-second .dropdown:hover .dropdown-menu {
@@ -134,8 +138,9 @@ body {
 input[type="checkbox"] {
     display: none;
 }
-.navbar-second.toggled {
+.navbar-second .flex {
     background-color: #0077C0;
+    position: absolute;
 }
 @media (max-width: 952px) {
     .navbar-second .logo {
@@ -348,7 +353,7 @@ h2 {
     width: 80%;
 }
 .img_deg {
-    width: 50%;
+    width: 100%;
     max-width: 350px;
     height: auto;
     margin-left: 20px; /* Change to margin-left to create space between the image and text */
