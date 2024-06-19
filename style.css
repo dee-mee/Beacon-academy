@@ -356,7 +356,7 @@ h2 {
 }
 .img_deg {
     width: 50%;
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     margin-left: 20px; /* Change to margin-left to create space between the image and text */
 }
