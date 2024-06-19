@@ -45,14 +45,6 @@ body {
     gap: 5px;
 }
 
-body, h1, ul, li, a {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
-    font-family: Arial, sans-serif;
-}
 @media (max-width: 768px) {
     .navbar-one {
         flex-direction: column;
@@ -391,12 +383,6 @@ h2 {
         margin: 170px;
         width: 70%;
     }
-}
-
-.text-box {
-    color: #000;
-    margin-right: 50px;
-    text-align: absolute;
 }
 
 .text-box h2 {
