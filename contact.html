@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Beacon Academy</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-  </head>
-  <body>
+</head>
+<body>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
@@ -23,93 +22,213 @@ body{
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
 }
-.contact-bg{
-    height: 40vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(image/contact-bg.jpg);
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    text-align: center;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077c0;
     color: #fff;
+    padding: 1rem;
+}
+  
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #0077c0;
+    width: 200px;
+    z-index: 1;
+}
+
+.dropdown li {
+    display: block;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 0.5rem;
+}
+
+.dropdown li a:hover {
+    background-color: #0077c0;
+}
+
+.nav-links li:hover > .dropdown {
+    display: block;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+    margin-right: 1rem;
+}
+
+.logo h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+    
+    .logo h2 {
+        font-size: 1.2rem;
+    }
+}
+
+.contact-bg {
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(images/contact-bg.jpg) center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
+    text-align: center;
 }
-.contact-bg h3{
+
+.contact-bg h3 {
     font-size: 1.3rem;
     font-weight: 400;
 }
-.contact-bg h2{
+
+.contact-bg h2 {
     font-size: 3rem;
     text-transform: uppercase;
     padding: 0.4rem 0;
     letter-spacing: 4px;
 }
-.line div{
+
+.line div {
     margin: 0 0.2rem;
 }
+
 .line div:nth-child(1),
-.line div:nth-child(3){
+.line div:nth-child(3) {
     height: 3px;
     width: 70px;
     background: #0077c0;
     border-radius: 5px;
 }
-.line{
+
+.line {
     display: flex;
     align-items: center;
 }
-.line div:nth-child(2){
+
+.line div:nth-child(2) {
     width: 10px;
     height: 10px;
     background: #0077c0;
     border-radius: 50%;
 }
-.text{
+
+.text {
     font-weight: 300;
     opacity: 0.9;
 }
-.contact-bg .text{
+
+.contact-bg .text {
     margin: 1.6rem 0;
 }
-.contact-body{
+
+.contact-body {
     max-width: 1320px;
     margin: 0 auto;
     padding: 0 1rem;
 }
-.contact-info{
+
+.contact-info {
     margin: 2rem 0;
     text-align: center;
     padding: 2rem 0;
 }
-.contact-info span{
+
+.contact-info span {
     display: block;
 }
-.contact-info div{
+
+.contact-info div {
     margin: 0.8rem 0;
     padding: 1rem;
 }
-.contact-info span .fas{
+
+.contact-info span .fas {
     font-size: 2rem;
     padding-bottom: 0.9rem;
     color: #0077c0;
 }
-.contact-info div span:nth-child(2){
+
+.contact-info div span:nth-child(2) {
     font-weight: 500;
     font-size: 1.1rem;
 }
-.contact-info .text{
+
+.contact-info .text {
     padding-top: 0.4rem;
 }
-.contact-form{
+
+.contact-form {
     padding: 2rem 0;
     border-top: 1px solid #c7c7c7;
 }
-.contact-form form{
+
+.contact-form form {
     padding-bottom: 1rem;
 }
-.form-control{
+
+.form-control {
     width: 100%;
     border: 1.5px solid #c7c7c7;
     border-radius: 5px;
@@ -119,15 +238,18 @@ body{
     font-size: 1rem;
     outline: 0;
 }
-.form-control:focus{
+
+.form-control:focus {
     box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
 }
-.contact-form form div{
+
+.contact-form form div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 0.6rem;
 }
-.send-btn{
+
+.send-btn {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
@@ -139,31 +261,38 @@ body{
     cursor: pointer;
     transition: all 0.4s ease;
 }
-.send-btn:hover{
+
+.send-btn:hover {
     opacity: 0.8;
 }
-.contact-form > div img{
+
+.contact-form > div img {
     width: 85%;
 }
-.contact-form > div{
+
+.contact-form > div {
     margin: 0 auto;
     text-align: center;
 }
-.contact-footer{
+
+.contact-footer {
     padding: 2rem 0;
     background: #000;
 }
-.contact-footer h3{
+
+.contact-footer h3 {
     font-size: 1.3rem;
     color: #fff;
     margin-bottom: 1rem;
     text-align: center;
 }
-.social-links{
+
+.social-links {
     display: flex;
     justify-content: center;
 }
-.social-links a{
+
+.social-links a {
     text-decoration: none;
     width: 40px;
     height: 40px;
@@ -176,178 +305,156 @@ body{
     margin: 0.4rem;
     transition: all 0.4s ease;
 }
-.social-links a:hover{
+
+.social-links a:hover {
     color: #fff;
     border-color: #0077c0;
 }
 
-@media screen and (min-width: 768px){
-    .contact-bg .text{
+@media screen and (min-width: 768px) {
+    .contact-bg .text {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
     }
-    .contact-info{
+    .contact-info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (min-width: 992px){
-    .contact-bg .text{
+@media screen and (min-width: 992px) {
+    .contact-bg .text {
         width: 50%;
     }
-    .contact-form{
+    .contact-form {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
     }
 }
 
-@media screen and (min-width: 1200px){
-    .contact-info{
+@media screen and (min-width: 1200px) {
+    .contact-info {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 </style>
-<nav class="navbar-one flex">
-    <div class="left flex">
-        <div class="email">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <span>info@yourdomain.com</span>
-        </div>
-        <div class="call">
-            <i class="fa fa-phone-alt" aria-hidden="true"></i>
-            <span>+1234567890</span>
-        </div>
-    </div>
-    <div class="right flex">
-        <div class="twitter">
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-            <span>Twitter</span>
-        </div>
-        <div class="facebook">
-            <i class="fab fa-facebook" aria-hidden="true"></i>
-            <span>Facebook</span>
-        </div>
-    </div>
-</nav>
-<nav class="navbar-second flex">
-    <div class="logo">
-        <img src="images/BOH-LOGO.png" alt="Beacon Logo">
-        <h1>Beacon</h1>
-    </div>
-    <ul class="flex">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li class="dropdown">
-            <a href="schools.html">Schools <i class="fas fa-caret-down"></i></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Kindergarten</a></li>
-                <li><a href="#">Academy</a></li>
-                <li><a href="#">Junior</a></li>
-            </ul>
+<header>
+    <nav>
+        <div class="logo">
+
+              <img src="images/BOH-LOGO.png" alt="Logo">
+            <h2>Beacon Academy</h2>
+          </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Schools</a>
+          <ul class="dropdown">
+            <li><a href="#">Kindergarten</a></li>
+            <li><a href="#">Academy</a></li>
+            <li><a href="#">Junior</a></li>
+          </ul>
         </li>
-        <li><a href="activities.html">Activities</a></li>
-        <li><a href="feestructure.html">School Fees</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="https://forms.gle/8jrWctRhj6CxEGAU6">Enquiry</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-</nav>
-    <section class = "contact-section">
-      <div class = "contact-bg">
-        <h3>Get in Touch with Us</h3>
-        <h2>contact us</h2>
-        <div class = "line">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <p class = "text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda iste facilis quos impedit fuga nobis modi debitis laboriosam velit reiciendis quisquam alias corporis, maxime enim, optio ab dolorum sequi qui.</p>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">Fees</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-
-
-      <div class = "contact-body">
-        <div class = "contact-info">
-          <div>
-            <span><i class = "fas fa-mobile-alt"></i></span>
-            <span>Phone No.</span>
-            <span class = "text">1-2392-23928-2</span>
-          </div>
-          <div>
-            <span><i class = "fas fa-envelope-open"></i></span>
-            <span>E-mail</span>
-            <span class = "text">mail@company.com</span>
-          </div>
-          <div>
-            <span><i class = "fas fa-map-marker-alt"></i></span>
-            <span>Address</span>
-            <span class = "text">2939 Patrick Street, Vicotria TX, United States</span>
-          </div>
-          <div>
-            <span><i class = "fas fa-clock"></i></span>
-            <span>Opening Hours</span>
-            <span class = "text">Monday - Friday (9:00 AM to 5:00 PM)</span>
-          </div>
-        </div>
-
-        <div class = "contact-form">
-          <form>
-            <div>
-              <input type = "text" class = "form-control" placeholder="First Name">
-              <input type = "text" class = "form-control" placeholder="Last Name">
-            </div>
-            <div>
-              <input type = "email" class = "form-control" placeholder="E-mail">
-              <input type = "text" class = "form-control" placeholder="Phone">
-            </div>
-            <textarea rows = "5" placeholder="Message" class = "form-control"></textarea>
-            <input type = "submit" class = "send-btn" value = "send message">
-          </form>
-
-          <div>
-            <img src = "images/contact-png.png" alt = "">
-          </div>
-        </div>
+    </nav>
+  </header>
+  <section class = "contact-section">
+    <div class = "contact-bg">
+      <h3>Get in Touch with Us</h3>
+      <h2>contact us</h2>
+      <div class = "line">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-
-      <div class = "map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6369922723165!2d36.76049007416703!3d-1.394302635752033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05b0eb95a0eb%3A0xfb77903c7dbc4b18!2sBeacon%20Of%20Hope!5e0!3m2!1sen!2ske!4v1718886189038!5m2!1sen!2ske" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
-      <footer class="footer">
-        <div class="footer-col">
-            <h4>Beacon of Hope</h4>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Affiliate Program</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Get Help</h4>
-            <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Admissions</a></li>
-                <li><a href="#">School Fees</a></li>
-                <li><a href="#">Scholarships</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Follow Us</h4>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </footer>
-    </section>
+<div class = "contact-body">
+  <div class = "contact-info">
+    <div>
+      <span><i class = "fas fa-mobile-alt"></i></span>
+      <span>Phone No.</span>
+      <span class = "text">1-2392-23928-2</span>
+    </div>
+    <div>
+      <span><i class = "fas fa-envelope-open"></i></span>
+      <span>E-mail</span>
+      <span class = "text">mail@company.com</span>
+    </div>
+    <div>
+      <span><i class = "fas fa-map-marker-alt"></i></span>
+      <span>Address</span>
+      <span class = "text">2939 Patrick Street, Vicotria TX, United States</span>
+    </div>
+    <div>
+      <span><i class = "fas fa-clock"></i></span>
+      <span>Opening Hours</span>
+      <span class = "text">Monday - Friday (9:00 AM to 5:00 PM)</span>
+    </div>
+  </div>
 
-    
+  <div class = "contact-form">
+    <form>
+      <div>
+        <input type = "text" class = "form-control" placeholder="First Name">
+        <input type = "text" class = "form-control" placeholder="Last Name">
+      </div>
+      <div>
+        <input type = "email" class = "form-control" placeholder="E-mail">
+        <input type = "text" class = "form-control" placeholder="Phone">
+      </div>
+      <textarea rows = "5" placeholder="Message" class = "form-control"></textarea>
+      <input type = "submit" class = "send-btn" value = "send message">
+    </form>
 
-  </body>
+    <div>
+      <img src = "images/contact-png.png" alt = "">
+    </div>
+  </div>
+</div>
+
+<div class = "map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6369922723165!2d36.76049007416703!3d-1.394302635752033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05b0eb95a0eb%3A0xfb77903c7dbc4b18!2sBeacon%20Of%20Hope!5e0!3m2!1sen!2ske!4v1718886189038!5m2!1sen!2ske" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+  </section>
+<section class="contact-footer">
+    <h3>Follow us on</h3>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</section>
+<script>
+    const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("nav-active");
+
+  links.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+    }
+  });
+
+  burger.classList.toggle("toggle");
+});
+
+</script>
+</body>
 </html>
