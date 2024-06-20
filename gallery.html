@@ -17,52 +17,36 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar-one flex">
-            <div class="left flex">
-                <div class="email">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <span>info@yourdomain.com</span>
-                </div>
-                <div class="call">
-                    <i class="fa fa-phone-alt" aria-hidden="true"></i>
-                    <span>+1234567890</span>
-                </div>
-            </div>
-            <div class="right flex">
-                <div class="twitter">
-                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                    <span>Twitter</span>
-                </div>
-                <div class="facebook">
-                    <i class="fab fa-facebook" aria-hidden="true"></i>
-                    <span>Facebook</span>
-                </div>
-            </div>
-        </nav>
-        <nav class="navbar-second">
+    <header>
+        <nav>
             <div class="logo">
-                <img src="images/BOH-LOGO.png" alt="Beacon Logo">
-                <h1>Beacon</h1>
-            </div>
-            <ul class="flex">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="schools.html">Schools <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Kindergarten</a></li>
-                        <li><a href="#">Academy</a></li>
-                        <li><a href="#">Junior</a></li>
-                    </ul>
-                </li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="feestructure.html">School Fees</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="https://forms.gle/8jrWctRhj6CxEGAU6">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+    
+                  <img src="images/BOH-LOGO.png" alt="Logo">
+                <h2>Beacon Academy</h2>
+              </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="schools.html">Schools</a>
+              <ul class="dropdown">
+                <li><a href="#">Kindergarten</a></li>
+                <li><a href="#">Academy</a></li>
+                <li><a href="#">Junior</a></li>
+              </ul>
+            </li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="feestructure.html">Fees</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
         </nav>
+      </header>
 
         <div class="gallery-example">
     <h3>Beacon of Hope Gallery</h3>
@@ -165,7 +149,25 @@
         }
     
         window.onload = shuffleImages;
-    </script>
+             const burger = document.querySelector(".burger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+        
+        burger.addEventListener("click", () => {
+          navLinks.classList.toggle("nav-active");
+        
+          links.forEach((link, index) => {
+            if (link.style.animation) {
+              link.style.animation = "";
+            } else {
+              link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
+          });
+        
+          burger.classList.toggle("toggle");
+        });
+        
+        </script>
    
 </body>
 </html>
