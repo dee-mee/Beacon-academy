@@ -139,22 +139,6 @@ body {
     background-color: #0a7ae9;
 }
 
-.checkbtn {
-    font-size: 30px !important;
-    color: #fff !important;
-    display: none;
-    z-index: 2;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-.navbar-second .flex {
-    background-color: #0077C0;
-    position: absolute;
-}
-
 @media (max-width: 952px) {
     .navbar-second .logo {
         font-size: 30px;

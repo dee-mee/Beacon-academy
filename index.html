@@ -40,11 +40,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar-second flex">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
+        <nav class="navbar-second">
             <div class="logo">
                 <img src="images/BOH-LOGO.png" alt="Beacon Logo">
                 <h1>Beacon</h1>
@@ -204,17 +200,6 @@
             var modal = document.getElementById("myModal");
             modal.style.display = "none";
         }
-            document.addEventListener('DOMContentLoaded', function() {
-                const menuItems = document.querySelectorAll('.navbar-second ul li a');
-                const checkbox = document.querySelector('input[type="checkbox"]');
-        
-                menuItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        checkbox.checked = false;
-                    });
-                });
-            });
         </script>
-
 </body>
 </html>
