@@ -14,89 +14,136 @@
     <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card h3 {
+            margin: 0;
+            padding: 16px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .card:hover {
+            border: 2px solid #007BFF; 
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+        }
+        @media (min-width: 600px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (min-width: 900px) {
+            .card {
+                width: calc(33.33% - 20px);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-    
-                  <img src="images/BOH-LOGO.png" alt="Logo">
+                <img src="images/BOH-LOGO.png" alt="Logo">
                 <h2>Beacon Academy</h2>
-              </div>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <a href="schools.html">Schools</a>
-              <ul class="dropdown">
-                <li><a href="#">Kindergarten</a></li>
-                <li><a href="#">Academy</a></li>
-                <li><a href="#">Junior</a></li>
-              </ul>
-            </li>
-            <li><a href="about-us.html">About</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="feestructure.html">Fees</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="schools.html">Schools</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Kindergarten</a></li>
+                        <li><a href="#">Academy</a></li>
+                        <li><a href="#">Junior</a></li>
+                    </ul>
+                </li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="feestructure.html">Fees</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
-      </header>
-      <section class = "contact-section">
-        <div class = "contact-bg">
-       
-          <h2>Beacon Co-curricular activities</h2>
-          <h3>Beacon Sports</h3>
-          <div class = "line">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          </div>
-      </section>
-
-    <section class="activities">
-        <h2>Our Activities</h2>
-        <div class="activity-section">
-            <img src="images/sports.jpg" alt="Sports">
-            <h3>Sports</h3>
-            <p>Engage in various sports such as soccer, basketball, and tennis to promote physical fitness and teamwork.</p>
-        </div>
-        <div class="activity-section">
-            <img src="images/arts-and-crafts.jpg" alt="Arts and Crafts">
-            <h3>Arts and Crafts</h3>
-            <p>Explore creativity with activities like painting, drawing, and sculpture, fostering imagination and artistic skills.</p>
-        </div>
-        <div class="activity-section">
-            <img src="images/music-and-dance.jpg" alt="Music and Dance">
-            <h3>Music and Dance</h3>
-            <p>Join our music and dance programs to learn instruments, vocal techniques, and various dance styles.</p>
-        </div>
-        <div class="activity-section">
-            <img src="images/science-clubs.jpg" alt="Science Clubs">
-            <h3>Science Clubs</h3>
-            <p>Participate in science clubs to conduct experiments, engage in STEM projects, and develop a love for discovery.</p>
-        </div>
-        <div class="activity-section">
-            <img src="images/community-service.jpg" alt="Community Service">
-            <h3>Run for The Bibleless</h3>
-            <p>Get involved in community service projects to learn the value of giving back and making a difference in society.</p>
-        </div>
-        <div class="activity-section">
-            <img src="images/debate-club.jpg" alt="Debate Club">
-            <h3>Debate Club</h3>
-            <p>Enhance your public speaking and critical thinking skills by joining our debate club.</p>
-        </div>
-        <div class="activity-section">
-            <img src="images/language-classes.jpg" alt="Language Classes">
-            <h3>Language Classes</h3>
-            <p>Learn new languages and cultures in our interactive language classes.</p>
+    </header>
+    <section class="contact-section">
+        <div class="contact-bg">
+            <h2>Beacon Co-curricular activities</h2>
+            <h3>Beacon Sports</h3>
+            <div class="line">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </section>
+    <section class="activities">
+        <h2>Our Activities</h2>
+    </section>
+    <div class="container">
+        <div class="card">
+            <img src="images/images/21.jpg" alt="Chess">
+            <h3>Chess</h3>
+        </div>
+        <div class="card">
+            <img src="images/images/1.jpg" alt="Run for bibleless">
+            <h3>Run for Bibleless</h3>
+        </div>
+        <div class="card">
+            <img src="images/images/31.jpg" alt="Concert">
+            <h3>Science Projects</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="images/images/cooking1.JPG" alt="Chess">
+            <h3>Cooking class</h3>
+        </div>
+        <div class="card">
+            <img src="images/images/election.jpg" alt="elections">
+            <h3>Elections</h3>
+        </div>
+        <div class="card">
+            <img src="images/images/concert.jpg" alt="concert">
+            <h3>Beacon of hope Concert</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="images/images/meeting1.jpg" alt="meeting">
+            <h3>Parents Meeting</h3>
+        </div>
+        <div class="card">
+            <img src="images/images/library.JPG" alt="kindergaten library">
+            <h3>Kindergarten library</h3>
+        </div>
+        <div class="card">
+            <img src="images/images/31.jpg" alt="science fair">
+            <h3>Science Projects</h3>
+        </div>
+    </div>
     <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i></a>
     <footer class="footer">
         <div class="footer-col">
@@ -130,23 +177,19 @@
     </footer>
     <script>
         const burger = document.querySelector(".burger");
-    const navLinks = document.querySelector(".nav-links");
-    const links = document.querySelectorAll(".nav-links li");
-    
-    burger.addEventListener("click", () => {
-      navLinks.classList.toggle("nav-active");
-    
-      links.forEach((link, index) => {
-        if (link.style.animation) {
-          link.style.animation = "";
-        } else {
-          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-        }
-      });
-    
-      burger.classList.toggle("toggle");
-    });
-    
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+        burger.addEventListener("click", () => {
+            navLinks.classList.toggle("nav-active");
+            links.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = "";
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+            burger.classList.toggle("toggle");
+        });
     </script>
 </body>
 </html>
