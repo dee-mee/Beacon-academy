@@ -129,7 +129,7 @@ nav {
     }
 }.contact-bg {
     height: 40vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(images/contact-bg.jpg) center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(images/slide1.jpg) center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -465,12 +465,12 @@ h2 {
 
 .card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: 300px;
+    object-fit: fit;
 }
 
 .card-content {
-    padding: 20px;
+    padding: 10px;
 }
 
 .card h3 {
@@ -479,7 +479,7 @@ h2 {
 }
 
 .card p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -641,7 +641,7 @@ h2 {
     bottom: 20px;
     right: 20px;
     background-color: #0a19a5;
-    color: white;
+    color: rgb(245, 243, 243);
     padding: 10px;
     border-radius: 50%;
     text-align: center;
