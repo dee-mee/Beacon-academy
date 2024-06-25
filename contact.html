@@ -412,19 +412,18 @@ nav {
       <span class = "text">Monday - Friday (8:00 AM to 5:00 PM)</span>
     </div>
   </div>
-
-  <div class = "contact-form">
-    <form>
-      <div>
-        <input type = "text" class = "form-control" placeholder="First Name">
-        <input type = "text" class = "form-control" placeholder="Last Name">
-      </div>
-      <div>
-        <input type = "email" class = "form-control" placeholder="E-mail">
-        <input type = "text" class = "form-control" placeholder="Phone">
-      </div>
-      <textarea rows = "5" placeholder="Message" class = "form-control"></textarea>
-      <input type = "submit" class = "send-btn" value = "send message">
+  <div class="contact-form">
+    <form id="contactForm">
+        <div>
+            <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+            <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+        </div>
+        <div>
+            <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+            <input type="text" name="phone" class="form-control" placeholder="Phone">
+        </div>
+        <textarea rows="5" name="message" placeholder="Message" class="form-control" required></textarea>
+        <input type="submit" class="send-btn" value="Send Message">
     </form>
 
     <div>
@@ -471,6 +470,23 @@ nav {
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modalImg">
   </div>
+
+
+
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+ <script>
+emailjs.send("service_7q01nvc","template_1c849tl");
+
+ </script>
+  
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init("2qz60TECszNDiC0LU");
+   })();
+</script>
+
 <script>
     const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".nav-links");
@@ -490,6 +506,37 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("toggle");
 });
 
+    (function() {
+        emailjs.init("2qz60TECszNDiC0LU"); // Replace with your EmailJS user ID
+        document.addEventListener("DOMContentLoaded", function() {
+            emailjs.init("2qz60TECszNDiC0LU"); // Replace with your EmailJS user ID
+        
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+        
+                // Collect form data
+                var formData = {
+                    firstName: document.querySelector('input[name="firstName"]').value,
+                    lastName: document.querySelector('input[name="lastName"]').value,
+                    email: document.querySelector('input[name="email"]').value,
+                    phone: document.querySelector('input[name="phone"]').value,
+                    message: document.querySelector('textarea[name="message"]').value,
+                };
+        
+                console.log(formData); // Debug: Print formData to the console
+        
+                // Send the form data using EmailJS
+                emailjs.send('service_7q01nvc', 'template_1c849tl', formData)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert('Message sent successfully!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        alert('Failed to send message.');
+                    });
+            });
+        });
+    });  
 </script>
 </body>
 </html>
