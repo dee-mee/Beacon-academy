@@ -340,6 +340,22 @@ nav {
     background-color: #0077C0;
 }
 
+.about-content .Apply-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077C0;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.about-content .Apply-now:hover {
+    background-color: #0077C0;
+}
+
 @media screen and (max-width: 768px) {
     .heading {
         padding: 0px 20px;
