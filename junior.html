@@ -16,6 +16,200 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <style>
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: white;
+        }
+        
+        .content {
+            max-width: 50%;
+        }
+        
+        .content h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0077c0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .images {
+            position: relative;
+            width: 50%;
+            height: 450px; /* Adjust as needed to contain all images */
+        }
+        
+        .images img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            transition: transform 0.3s;
+        }
+        
+        .main-image {
+            top: 0;
+            left: 50px;
+            z-index: 3;
+            transform: rotate(0deg);
+        }
+        
+        .concert-image {
+            top: 120px;
+            left: 0;
+            z-index: 2;
+            transform: rotate(-15deg);
+        }
+        
+        .school-image {
+            top: 240px;
+            left: 100px;
+            z-index: 1;
+            transform: rotate(15deg);
+        }    
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.content {
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0077c0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.images {
+    position: relative;
+    width: 50%;
+    height: 450px; /* Adjust as needed to contain all images */
+}
+
+.images img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.main-image {
+    top: 0;
+    left: 50px;
+    z-index: 3;
+    transform: rotate(0deg);
+}
+
+.concert-image {
+    top: 120px;
+    left: 0;
+    z-index: 2;
+    transform: rotate(-15deg);
+}
+
+.school-image {
+    top: 240px;
+    left: 100px;
+    z-index: 1;
+    transform: rotate(15deg);
+}
+
+.academic-programs {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.academic-programs h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.program-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.program-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: left;
+}
+
+.program-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.program-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.program-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.apply-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077c0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+    </style>
     <header>
         <nav>
             <div class="logo">
@@ -62,10 +256,47 @@
 
 
 
+    <section class="about-us">
+        <div class="container">
+            <div class="content">
+                <h1>Welcome to Beacon of Hope School</h1>
+                <p>Welcome to  Beacon of Hope School, where education shines bright and empowers students to reach their full potential. Our website is designed to provide you with a comprehensive overview of our school’s offerings, values, and community.</p>
+                <a href="#" class="read-more">Fees structure</a>
+            </div>
+            <div class="images">
+                <img src="images/board1.jpg" alt="Students" class="main-image">
+                <img src="images/board1.jpg" alt="Annual Concert" class="sub-image concert-image">
+                <img src="images/board1.jpg" alt="School Building" class="sub-image school-image">
+            </div>
+        </div>
+    </section>
 
 
 
 
+    <section class="academic-programs">
+        <h2>Our Academic Programs</h2>
+        <div class="program-cards">
+            <div class="program-card">
+                <img src="kindergarten.jpg" alt="Kindergarten">
+                <h3>Kindergarten</h3>
+                <p>At our Kindergarten, we create a nurturing and stimulating environment where young minds blossom through play-based learning, fostering a love for exploration and discovery.</p>
+                <a href="https://forms.gle/8jrWctRhj6CxEGAU6" class="apply-now">Apply Now</a>
+            </div>
+            <div class="program-card">
+                <img src="primary-school.jpg" alt="Primary School">
+                <h3>Primary School</h3>
+                <p>In our Primary School, we are dedicated to providing a foundation of quality education, fostering a love for learning, and empowering students to explore their potential in a supportive and engaging environment.</p>
+                <a href="https://forms.gle/8jrWctRhj6CxEGAU6" class="apply-now">Apply Now</a>
+            </div>
+            <div class="program-card">
+                <img src="junior-secondary.jpg" alt="Junior Secondary">
+                <h3>Junior Secondary</h3>
+                <p>At our Junior Secondary, we guide students through a dynamic educational journey, encouraging critical thinking, character development, and academic excellence to prepare them for the challenges ahead.</p>
+                <a href="https://forms.gle/8jrWctRhj6CxEGAU6" class="apply-now">Apply Now</a>
+            </div>
+        </div>
+    </section>
 
 
 
