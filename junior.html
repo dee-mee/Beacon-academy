@@ -20,105 +20,46 @@
 
         .container {
             display: flex;
-            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .image-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .text-section {
+            flex: 1;
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .feature {
+            display: flex;
             align-items: center;
-            padding: 50px;
-            background-color: white;
+            margin-bottom: 20px;
         }
-        
-        .content {
-            max-width: 50%;
+        .feature-icon {
+            font-size: 24px;
+            margin-right: 10px;
         }
-        
-        .content h1 {
-            font-size: 36px;
-            color: #333;
-        }
-        
-        .content p {
+        .feature-title {
             font-size: 18px;
-            color: #666;
-            line-height: 1.6;
+            font-weight: bold;
         }
-        
-        .read-more {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #0077c0;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        .feature-description {
+            margin: 5px 0;
         }
-        
-        .images {
-            position: relative;
-            width: 50%;
-            height: 450px; /* Adjust as needed to contain all images */
-        }
-        
-        .images img {
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            transition: transform 0.3s;
-        }
-        
-        .main-image {
-            top: 0;
-            left: 50px;
-            z-index: 3;
-            transform: rotate(0deg);
-        }
-        
-        .concert-image {
-            top: 120px;
-            left: 0;
-            z-index: 2;
-            transform: rotate(-15deg);
-        }
-        
-        .school-image {
-            top: 240px;
-            left: 100px;
-            z-index: 1;
-            transform: rotate(15deg);
-        }    
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: white;
-}
-
-.content {
-    max-width: 50%;
-}
-
-.content h1 {
-    font-size: 36px;
-    color: #333;
-}
-
-.content p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0077c0;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
 .images {
     position: relative;
     width: 50%;
@@ -208,7 +149,63 @@
     text-decoration: none;
     border-radius: 5px;
 }
+.academic-programs {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.academic-programs h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.program-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.program-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+.program-card img {
+    width: 100%;
+    height: auto;
+}
+.program-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+.program-card p {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.apply-now {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.apply-now:hover {
+    background-color: #0056b3;
+}
 
+@media (max-width: 768px) {
+    .program-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
     </style>
     <header>
         <nav>
@@ -253,24 +250,30 @@
     </section>
 
 
-
-
-
-    <section class="about-us">
-        <div class="container">
-            <div class="content">
-                <h1>Welcome to Beacon of Hope School</h1>
-                <p>Welcome to  Beacon of Hope School, where education shines bright and empowers students to reach their full potential. Our website is designed to provide you with a comprehensive overview of our school’s offerings, values, and community.</p>
-                <a href="#" class="read-more">Fees structure</a>
-            </div>
-            <div class="images">
-                <img src="images/board1.jpg" alt="Students" class="main-image">
-                <img src="images/board1.jpg" alt="Annual Concert" class="sub-image concert-image">
-                <img src="images/board1.jpg" alt="School Building" class="sub-image school-image">
-            </div>
+    <div class="container">
+        <div class="image-section">
+            <img src="images/background.jpg" alt="Office image">
         </div>
-    </section>
-
+        <div class="text-section">
+            <div class="title">Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</div>
+            <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="feature">
+                <div class="feature-icon">🔧</div>
+                <div>
+                    <div class="feature-title">Ullamco laboris nisi ut aliquip consequat</div>
+                    <div class="feature-description">Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</div>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚙️</div>
+                <div>
+                    <div class="feature-title">Magnam soluta odio exercitationem reprehenderi</div>
+                    <div class="feature-description">Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</div>
+                    <a href="https://forms.gle/8jrWctRhj6CxEGAU6" class="apply-now">Fee Structure</a>
+                </div>
+            </div>
+            </div>
+    </div>
 
 
 
