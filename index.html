@@ -58,7 +58,7 @@
         </section>
     </header>
 
-    <section class="container">
+    <section class="container scroll-animate">
         <h1>About us</h1>
         <div class="about">
             <div class="about-image">
@@ -71,10 +71,10 @@
             </div>
         </div>
     </section>    
-    <div class="wrapper">
+    <div class="wrapper scroll-animate">
         <img class="img_deg" src="images/director.jpg" alt="">
         <div class="text-box">
-            <h2>Director </h2>
+            <h2>Beacon Academy Director </h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Voluptates temporibus deleniti et? Cum illum repellat placeat accusamus 
                 quasi neque, eligendi suscipit, vero eum, 
@@ -83,39 +83,39 @@
                 sequi molestias qui alias obcaecati consectetur quam aperiam, ex labore consequuntur a.</p>
         </div>
     </div>   
-    <h2>Beacon of Hope Board</h2> 
+    <h2 class="scroll-animate">Beacon Academy Leadership</h2> 
     <div class="card-container">
         <div class="card">
-            <img src="images/board1.jpg" alt="Board Member 1">
+            <img src="images/ibrahim.png" alt="Board Member 1">
             <div class="card-content">
-                <h3>Principal</h3>
+                <h3>Head of Training Academy</h3>
                 <p>Lorem ipsum <span> sit amet consectetur adipisicing elit. Est ut vero asperiores voluptates nesciunt enim delectus? Qui a?</span></p>
             </div>
         </div>
         <div class="card">
-            <img src="images/ibrahim.png" alt="Board Member 2">
+            <img src="images/board1.jpg" alt="Board Member 2">
             <div class="card-content">
-                <h3>Director Education</h3>
+                <h3>Principal Junior Secondary</h3>
                 <p>Lorem ipsum <span> sit amet consectetur adipisicing elit. Est ut vero asperiores voluptates nesciunt enim delectus? Qui a?</span></p>
             </div>
         </div>
         <div class="card">
             <img src="images/missella.png" alt="Board Member 3">
             <div class="card-content">
-                <h3>Miss Ella</h3>
+                <h3>Headteacher Academy </h3>
                 <p>Lorem ipsum <span> sit amet consectetur adipisicing elit. Est ut vero asperiores voluptates nesciunt enim delectus? Qui a?</span> </p>
             </div>
         </div>
         <div class="card">
             <img src="images/Board2.png" alt="Board Member 4">
             <div class="card-content">
-                <h3>Card 4</h3>
+                <h3>Headteacher Kindergarten</h3>
                 <p>Lorem ipsum<span> dolor sit amet consectetur adipisicing elit. Est ut vero asperiores voluptates nesciunt enim delectus? Qui a?</span></p>
             </div>
         </div>
     </div>
-    <div class="gallery-example">
-        <h3>Beacon of Hope Gallery</h3>
+    <div class="gallery-example scroll-animate">
+        <h3>Beacon Academy Gallery</h3>
         <div class="pictures">
             <img src="images/images/31.jpg" alt="Gallery Image 1" onclick="openModal(this)">
             <img src="images/images/14.jpg" alt="Gallery Image 2" onclick="openModal(this)">
@@ -209,8 +209,29 @@
                 heroSection.style.backgroundImage = `url(${images[currentIndex]})`;
             }
     
-            setInterval(changeBackground, 5000); // Change image every 5 seconds
+            setInterval(changeBackground, 20000);
         });
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.scroll-animate');
+        
+            const options = {
+                threshold: 0.1
+            };
+        
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+        
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        
         </script>
 </body>
 </html>

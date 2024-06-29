@@ -221,14 +221,14 @@ nav {
 }
 .hero-section {
     position: relative;
-    background: no-repeat center center/cover;
-    height: 90vh;
+    background: url('images/slide1.jpg') no-repeat center center/cover;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    animation: backgroundChange 15s infinite;
+    animation: backgroundChange 30s infinite;
 }
 @keyframes backgroundChange {
     0% { background-image: url('images/slide1.jpg'); }
@@ -361,6 +361,16 @@ nav {
 
 .about-content .Apply-now:hover {
     background-color: #0077C0;
+}
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media screen and (max-width: 768px) {
