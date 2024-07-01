@@ -409,14 +409,18 @@ h2 {
     font-size: 40px;
     margin-bottom: 0.2em;
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse; 
-    margin-bottom: 5px;
-    margin-top: 10px;
+    margin: 0;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #ddd;
@@ -425,21 +429,17 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f8f2f2;
 }
+
 .img_deg {
     width: 100%;
     max-width: 400px;
-    height: auto;
+    height: 350px;
     margin-left: 20px; /* Change to margin-left to create space between the image and text */
+    border-radius: 10px; /* Adjust the value as needed */
 }
 
 .text-box {
     text-align: left;
-}
-
-.text-box h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #0077C0;
 }
 
 .text-box p {
@@ -459,14 +459,17 @@ h2 {
 
 @media (min-width: 768px) {
     .wrapper {
-        margin: 170px;
-        width: 70%;
+        width: 100%;
+        margin: 0;
+        padding: 30px;
     }
 }
+
 
 .text-box h2 {
     font-size: 32px;
     text-align: center;
+    color: #0077C0;
 }
 
 .card-container {
