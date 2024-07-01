@@ -228,7 +228,7 @@ nav {
     align-items: center;
     color: white;
     text-align: center;
-    animation: backgroundChange 30s infinite;
+    animation: backgroundChange 10s infinite;
 }
 @keyframes backgroundChange {
     0% { background-image: url('images/slide1.jpg'); }
@@ -694,6 +694,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .footer-col {
