@@ -288,7 +288,7 @@ nav {
     width: 90%;
     margin: 0 auto;
     padding: 10px 20px;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .about {
@@ -415,13 +415,19 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse; /* Change to row-reverse to align the image on the right */
-    margin: 20px;
-    margin-bottom: 20px;
-    width: 85%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f2f2;
 }
 .img_deg {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
     margin-left: 20px; /* Change to margin-left to create space between the image and text */
 }
@@ -466,7 +472,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 5px;
     background: #0077C0;
 }
 
@@ -694,7 +700,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    margin-bottom: 0;
 }
 
 .footer-col {
