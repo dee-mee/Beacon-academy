@@ -278,7 +278,7 @@ nav {
     margin-top: 30px;
     margin-right: 2em;
     display: inline-block;
-    border-radius: 15px; /* Adds rounded edges */
+    border-radius: 10px; /* Adds rounded edges */
 }
 
 @keyframes fadeIn {
@@ -290,7 +290,7 @@ nav {
         display: block;
         margin-right: 0;
         margin-bottom: 1em; /* Adds space between buttons */
-        border-radius: 9px; /* Ensures rounded edges on small screens as well */
+        border-radius: 5px; /* Ensures rounded edges on small screens as well */
     }
 }
 /* Section */
