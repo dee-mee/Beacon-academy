@@ -283,7 +283,13 @@ nav {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
+@media (max-width: 600px) {
+    .hero-section .apply-button {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 1em; /* Adds space between buttons */
+    }
+}
 /* Section */
 .container {
     width: 90%;
