@@ -276,6 +276,7 @@ nav {
     font-weight: bold;
     animation: fadeIn 3.5s;
     margin-top: 30;
+    margin-right: 2em;
 }
 
 @keyframes fadeIn {
