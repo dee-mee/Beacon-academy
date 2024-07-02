@@ -290,7 +290,7 @@ nav {
         display: block;
         margin-right: 0;
         margin-bottom: 1em; /* Adds space between buttons */
-        border-radius: 15px; /* Ensures rounded edges on small screens as well */
+        border-radius: 9px; /* Ensures rounded edges on small screens as well */
     }
 }
 /* Section */
