@@ -444,7 +444,7 @@ body, html {
 .img_deg {
     width: 100%;
     max-width: 400px;
-    height: 350px;
+    height: 400px;
     margin-left: 20px; /* Change to margin-left to create space between the image and text */
     border-radius: 10px; /* Adjust the value as needed */
 }
@@ -547,7 +547,7 @@ body, html {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(240, 237, 237, 0.2);
+    box-shadow: 0 8px 16px rgb(255, 255, 255);
     
 }
 
