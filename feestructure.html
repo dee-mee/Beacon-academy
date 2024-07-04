@@ -138,8 +138,8 @@
           </div>
       </section>
 
-  <div class="container">
-      <h3>FEES</h3>
+  <div class="container scroll-animate">
+      <h3 class="scroll-animate">FEES</h3>
 <p>At Beacon of Hope, we believe that every child deserves access to quality education,</p>
 <p>and that every child deserves the opportunity to grow and develop.</p>
 <p>We offer a variety of fee structures to meet the needs of our students.</p><br>
@@ -212,7 +212,26 @@
     
       burger.classList.toggle("toggle");
     });
-    
+    document.addEventListener("DOMContentLoaded", function() {
+      const elements = document.querySelectorAll('.scroll-animate');
+  
+      const options = {
+          threshold: 0.1
+      };
+  
+      const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                  observer.unobserve(entry.target);
+              }
+          });
+      }, options);
+  
+      elements.forEach(element => {
+          observer.observe(element);
+      });
+  });
 </script>
 </body>
 </html>

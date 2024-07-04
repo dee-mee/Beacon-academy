@@ -363,7 +363,7 @@ nav {
       </div>
     </nav>
   </header>
-  <section class = "contact-section">
+  <section class = "contact-section scroll-animate">
     <div class = "contact-bg">
       <h3>Get in Touch with Us</h3>
       <h2>contact us</h2>
@@ -374,7 +374,7 @@ nav {
       </div>
       </div>
   </section>
-<div class = "contact-body">
+<div class = "contact-body scroll-animate">
   <div class = "contact-info">
     <div>
       <span><i class = "fas fa-mobile-alt"></i></span>
@@ -397,7 +397,7 @@ nav {
       <span class = "text">Monday - Friday (8:00 AM to 5:00 PM)</span>
     </div>
   </div>
-  <div class="contact-form">
+  <div class="contact-form scroll-animate">
     <div class="container">
         <form id="contactForm">
             <div>
@@ -412,7 +412,7 @@ nav {
         </form>
     </div>
 
-    <div>
+    <div class="scroll-animate">
       <img src = "images/contact-png.png" alt = "">
     </div>
   </div>
@@ -479,6 +479,26 @@ burger.addEventListener("click", () => {
   });
 
   burger.classList.toggle("toggle");
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.scroll-animate');
+
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
 });
 </script>
 </body>

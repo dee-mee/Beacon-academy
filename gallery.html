@@ -61,7 +61,7 @@
           </div>
           </div>
       </section>
-        <div class="gallery-example">
+        <div class="gallery-example scroll-animate">
     <h3>Beacon of Hope Gallery</h3>
     <div class="pictures" id="pictureContainer">
         <img src="images/images/1.jpg" alt="Gallery Image 1" onclick="openModal(this)">
@@ -187,7 +187,26 @@
         
           burger.classList.toggle("toggle");
         });
-        
+        document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('.scroll-animate');
+      
+          const options = {
+              threshold: 0.1
+          };
+      
+          const observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('visible');
+                      observer.unobserve(entry.target);
+                  }
+              });
+          }, options);
+      
+          elements.forEach(element => {
+              observer.observe(element);
+          });
+      });
         
         </script>
    

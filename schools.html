@@ -65,7 +65,7 @@
     <section>
    
 
-      <section class="container"  id="Kindergaten">
+      <section class="container scroll-animate"  id="Kindergaten">
         <h1>Beacon Kindergarten</h1>
         <div class="about">
             <div class="about-image">
@@ -79,7 +79,7 @@
         </div>
       </section>  
 
-<section class="container"  id="Primary">
+<section class="container scroll-animate"  id="Primary">
   <h1>Primary school</h1>
   <div class="about">
       <div class="about-image">
@@ -96,7 +96,7 @@
 
 
 
-<section class="container" id="Junior">
+<section class="container scroll-animate" id="Junior">
   <h1>Junior High </h1>
   <div class="about">
       <div class="about-image">
@@ -159,6 +159,26 @@ burger.addEventListener("click", () => {
   });
 
   burger.classList.toggle("toggle");
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.scroll-animate');
+
+  const options = {
+      threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+          }
+      });
+  }, options);
+
+  elements.forEach(element => {
+      observer.observe(element);
+  });
 });
 
 </script>
