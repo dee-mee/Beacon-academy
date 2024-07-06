@@ -261,13 +261,19 @@ nav {
     margin: 20px 0;
     animation: fadeIn 2.5s;
     color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 6s steps(40, end) infinite;
 }
 
 .hero-section p {
     font-size: 1.2rem;
     animation: fadeIn 3s;
 }
-
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+}
 .hero-section .apply-button {
     padding: 10px 13px;
     background-color: #0077C0;
