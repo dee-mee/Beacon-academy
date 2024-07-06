@@ -457,7 +457,7 @@ h2 {
 @media (max-width: 767px) {
     .wrapper {
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 25px;
     }
 
     .img_deg {
@@ -469,7 +469,7 @@ h2 {
 @media (min-width: 768px) {
     .wrapper {
         width: 100%;
-        margin: 10;
+        margin: 15;
         padding: 30px;
     }
 }
