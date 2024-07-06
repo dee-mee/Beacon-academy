@@ -254,6 +254,9 @@ nav {
 .hero-section h1 {
     font-size: 3rem;
     animation: fadeIn 2s;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end) infinite;
 }
 
 .hero-section h2 {
@@ -261,9 +264,8 @@ nav {
     margin: 20px 0;
     animation: fadeIn 2.5s;
     color: #fff;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 6s steps(40, end) infinite;
+
+   
 }
 
 .hero-section p {
@@ -272,7 +274,7 @@ nav {
 }
 @keyframes typing{
     from{width: 0;}
-    to{width: 100%;}
+    to{width: 77%;}
 }
 .hero-section .apply-button {
     padding: 10px 13px;
@@ -357,6 +359,7 @@ nav {
     border-radius: 25px;
     margin-top: 15px;
     transition: 0.3s ease;
+    animation: bottom infinite ease-out 3s;
 }
 
 .about-content .read-more:hover {
@@ -715,8 +718,14 @@ h2 {
     font-size: 1rem;
     transition: background-color 0.3s, opacity 0.3s;
     margin-bottom: 3rem;
+    animation: bottom infinite ease-out 3s;
 }
 
+@keyframes bottom{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(30px);}
+    100%{transform: translateY(0);}
+}
 .view-more-button:hover {
     background-color: #005fa3;
     opacity: 0.8;
