@@ -254,9 +254,6 @@ nav {
 .hero-section h1 {
     font-size: 3rem;
     animation: fadeIn 2s;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 4s steps(40, end) infinite;
 }
 
 .hero-section h2 {
@@ -264,18 +261,13 @@ nav {
     margin: 20px 0;
     animation: fadeIn 2.5s;
     color: #fff;
-
-   
 }
 
 .hero-section p {
     font-size: 1.2rem;
     animation: fadeIn 3s;
 }
-@keyframes typing{
-    from{width: 0;}
-    to{width: 77%;}
-}
+
 .hero-section .apply-button {
     padding: 10px 13px;
     background-color: #0077C0;
