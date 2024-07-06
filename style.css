@@ -419,12 +419,6 @@ h2 {
     font-size: 40px;
     margin-bottom: 0.2em;
 }
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
 .wrapper {
     display: flex;
     justify-content: center;
@@ -547,7 +541,7 @@ body, html {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgb(255, 255, 255);
+    box-shadow: 0 8px 16px rgb(167, 163, 163);
     
 }
 
@@ -565,10 +559,27 @@ body, html {
     font-size: 24px;
     margin-bottom: 10px;
 }
-
+.rainbow-text {
+    font-weight: bold;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 3s linear infinite;
+}
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+        }
+}
 .card p {
     font-size: 16px;
     line-height: 1.5;
+    color: #fff;
 }
 
 .card a {
@@ -656,14 +667,14 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 3.0rem;
 }
 
 .gallery-example h3 {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 2.0rem;
     text-align: center;
+    margin-top: 1.5rem;
 }
 
 .gallery-example .pictures {
