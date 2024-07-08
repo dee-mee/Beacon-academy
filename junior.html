@@ -16,154 +16,6 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <style>
-.images {
-    position: relative;
-    width: 50%;
-    height: 450px; /* Adjust as needed to contain all images */
-}
-
-.images img {
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    transition: transform 0.3s;
-}
-
-.main-image {
-    top: 0;
-    left: 50px;
-    z-index: 3;
-    transform: rotate(0deg);
-}
-
-.concert-image {
-    top: 120px;
-    left: 0;
-    z-index: 2;
-    transform: rotate(-15deg);
-}
-
-.school-image {
-    top: 240px;
-    left: 100px;
-    z-index: 1;
-    transform: rotate(15deg);
-}
-
-.academic-programs {
-    padding: 50px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.academic-programs h2 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-.program-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.program-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    text-align: left;
-}
-
-.program-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.program-card h3 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.program-card p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.apply-now {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077c0;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.academic-programs {
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-.academic-programs h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.program-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-.program-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-}
-.program-card img {
-    width: 100%;
-    height: auto;
-}
-.program-card h3 {
-    margin: 10px 0;
-    font-size: 18px;
-}
-.program-card p {
-    padding: 0 10px 10px;
-    font-size: 14px;
-    line-height: 1.5;
-}
-.apply-now {
-    display: inline-block;
-    margin: 10px 0 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-.apply-now:hover {
-    background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .program-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-    </style>
     <header>
         <nav>
             <div class="logo">
@@ -173,12 +25,12 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li>
-                    <a href="schools.html">Schools</a>
+                    <a href="schools.html">Schools <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="kindergaten.html">Kindergarten</a></li>
+                        <li><a href="kindergarten.html">Kindergarten</a></li>
                         <li><a href="primary.html">Academy</a></li>
                         <li><a href="junior.html">Junior</a></li>
-                      </ul>
+                    </ul>
                 </li>
                 <li><a href="about-us.html">About</a></li>
                 <li><a href="activities.html">Activities</a></li>
@@ -223,7 +75,33 @@
             </div>
         </div>
       </section> 
-      
+      <div class="container scroll-animate">
+        <h1>Facilities</h1>
+        <p>Our state-of-the-art facilities at Beacon of Hope Junior Secondary School provide a dynamic and conducive environment for students to be creative and a conducive environment for innovativeness.</p>
+        <div class="facilities">
+            <div class="facility">
+                <img src="images/laboratory.jpg" alt="Science Lab">
+                <h2>Science Lab</h2>
+                <p>We have well-equipped modern laboratories that provide students with the necessary tools and resources to conduct experiments and hands-on learning experiences.</p>
+            </div>
+            <div class="facility">
+                <img src="images/complab.webp" alt="Computer Lab">
+                <h2>Computer Lab</h2>
+                <p>A well-equipped modern computer lab that allows students to work with the latest software, hardware and programming languages.</p>
+            </div>
+            <div class="facility">
+                <img src="images/images/2.jpg" alt="Classrooms">
+                <h2>Classrooms</h2>
+                <p>Well-equipped classrooms play a crucial role in providing a conducive learning environment for students that supports effective teaching and learning.</p>
+            </div>
+            <div class="facility">
+                <img src="images/music.png" alt="Music rooms">
+                <h2>Music Facility</h2>
+                <p>With a variety of instruments and dedicated instructors, students have the opportunity to learn and practice music in a supportive setting.</p>
+            </div>
+            
+        </div>
+    </div>
       
     <section class="academic-programs scroll-animate">
         <h2>Our Academic Programs</h2>

@@ -15,73 +15,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="prefetch" href="feestructure.html">
-    <style>
-        body{
-            background-color: #f5f5f5;
-        }
-        .activities h2{
-            margin-top: 10px;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            margin-top: 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 18px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 100%;
-            max-width: 300px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-        }
-        .card h3 {
-            margin: 0;
-            padding: 16px;
-            font-size: 1.2em;
-            color: #333;
 
-        }
-        .card:hover {
-            border: 5px solid #007BFF; 
-            box-shadow: 0 0 30px rgba(0, 123, 255, 0.6);
-        }
-        @media (min-width: 600px) {
-            .card {
-                width: calc(50% - 20px);
-            }
-        }
-        @media (min-width: 900px) {
-            .card {
-                width: calc(33.33% - 20px);
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeIn 1s ease-in-out forwards;
-            opacity: 0;
-        }
-        
-    </style>
 </head>
 <body>
     <header>
@@ -93,7 +27,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li>
-                    <a href="schools.html">Schools</a>
+                    <a href="schools.html">Schools <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="kindergaten.html">Kindergarten</a></li>
                         <li><a href="primary.html">Academy</a></li>
@@ -128,48 +62,49 @@
     <section class="activities scroll-animate">
         <h2>Our Activities</h2>
     </section>
-    <div class="container scroll-animate">
-        <div class="card">
+    <div class="container-act scroll-animate">
+        <div class="card-act">
             <img src="images/images/21.jpg" alt="Chess">
             <h3>Chess</h3>
         </div>
-        <div class="card">
+        <div class="card-act">
             <img src="images/images/1.jpg" alt="Run for bibleless">
             <h3>Run for Bibleless</h3>
         </div>
-        <div class="card">
+        <div class="card-act">
             <img src="images/images/31.jpg" alt="Concert">
             <h3>Science Projects</h3>
         </div>
     </div>
-    <div class="container scroll-animate">
-        <div class="card">
+    <div class="container-act scroll-animate">
+        <div class="card-act">
             <img src="images/images/cooking1.JPG" alt="Chess">
             <h3>Cooking class</h3>
         </div>
-        <div class="card">
+        <div class="card-act">
             <img src="images/images/election.jpg" alt="elections">
             <h3>Student Leadership</h3>
         </div>
-        <div class="card">
+        <div class="card-act">
             <img src="images/images/concert.jpg" alt="concert">
             <h3>Beacon of hope Concert</h3>
         </div>
     </div>
-    <div class="container scroll-animate">
-        <div class="card">
+    <div class="container-act scroll-animate">
+        <div class="card-act">
             <img src="images/images/meeting1.jpg" alt="meeting">
             <h3>Parental Engagement</h3>
         </div>
-        <div class="card">
+        <div class="card-act">
             <img src="images/images/library.JPG" alt="kindergaten library">
             <h3>Kindergarten library</h3>
         </div>
-        <div class="card">
+        <div class="card-act">
             <img src="images/images/31.jpg" alt="science fair">
             <h3>Science Fair</h3>
         </div>
     </div>
+
     <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i></a>
     <footer class="footer">
         <div class="footer-col">
