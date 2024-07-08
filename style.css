@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -127,7 +126,9 @@ nav {
     .logo h2 {
         font-size: 1.2rem;
     }
-}.contact-bg {
+}
+/*background image*/
+.contact-bg {
     height: 40vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(images/slide1.jpg) center/cover no-repeat;
     display: flex;
@@ -219,6 +220,8 @@ nav {
 .contact-info .text {
     padding-top: 0.4rem;
 }
+
+/*hero section for homepage*/
 .hero-section {
     position: relative;
     background: url('images/slide1.jpg') no-repeat center center/cover;
@@ -293,7 +296,9 @@ nav {
         padding: 10px 11px;
     }
 }
-/* Section */
+
+
+/*about Section */
 .container {
     width: 90%;
     margin: 0 auto;
@@ -379,7 +384,7 @@ nav {
     transition: opacity 1.2s ease-out, transform 1.2s ease-out;
   }
   
-  .scroll-animate.visible {
+.scroll-animate.visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -417,6 +422,7 @@ nav {
     
 }
 
+/*director section*/
 h2 {
     text-align: center;
     font-size: 40px;
@@ -512,6 +518,8 @@ h2 {
 .author strong {
     color: #0077C0; 
 }
+
+/*leadership section*/
 .card-container {
     display: flex;
     justify-content: center;
@@ -603,6 +611,8 @@ h2 {
 .card-content h3{
     color: #fff;
 }
+
+/*latest news section*/
 .latest-news {
     background-color: #0077C0;
     color: #fff;
@@ -672,7 +682,7 @@ h2 {
 }
 
 
-/*homepage gallery section*/
+/*homepage gallery section and gallery page*/
 .gallery-example {
     display: flex;
     flex-direction: column;
@@ -731,6 +741,7 @@ h2 {
     background-color: #005fa3;
     opacity: 0.8;
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -959,6 +970,8 @@ h2 {
     color: #0077C0;
     padding: 20px;
 }
+
+
 /*activities page*/
 .activities h2{
     margin-top: 10px;
@@ -1063,6 +1076,8 @@ h2 {
 }
 
 
+/*Kindergaten school css*/
+/*Primary school css*/
 /*Junior school css*/
 .images {
     position: relative;
@@ -1217,6 +1232,7 @@ h2 {
     padding: 10px;
 }
 
+/*Junior school facilities section*/
 .facilities {
     display: flex;
     flex-wrap: wrap;
@@ -1273,8 +1289,6 @@ h2 {
 }
 
 /*contact page*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-
 .container-contact {
     width: 80%;
     max-width: 600px;
@@ -1413,7 +1427,6 @@ h2 {
     }
 }
 
-
 /*footer*/
 .footer {
     background-color: #0077C0;
@@ -1429,7 +1442,7 @@ h2 {
 }
 
 .footer-logo {
-    width: 100px; /* Adjust the width as needed */
+    width: 200px; 
     margin-bottom: 20px;
     margin-left: 30px;
 }
@@ -1526,6 +1539,7 @@ h2 {
         align-items: center;
     }
 }
+
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
